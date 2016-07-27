@@ -5,9 +5,8 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS).
 
 # Installation
 
-1. Add `react-native-buglife` to `packages.json`
-2. `npm install`
-3. Install Buglife iOS via either CocoaPods or manually ([more info here](https://github.com/Buglife/Buglife-iOS))
+1. `npm install react-native-buglife --save`
+2. Install Buglife iOS via either CocoaPods or manually ([more info here](https://github.com/Buglife/Buglife-iOS))
 3. In the Xcode project navigator, right-click the **Libraries** group and select **Add Files to [your project]**.
 4. Go to `node_modules` ➡ `react-native-buglife`, and add `RNBuglife.xcodeproj`
 5. Open your Xcode project's **Build Phases** tab, and expand the **Link Binary With Libraries** panel. Add `libRNBuglife.a`
