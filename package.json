@@ -1,0 +1,28 @@
+{
+  "name": "react-native-buglife",
+  "version": "0.0.1",
+  "description": "Buglife for React Native",
+  "main": "index",
+  "scripts": {
+    "test": "flow"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ios",
+    "buglife"
+  ],
+  "author": {
+    "name": "Buglife",
+    "email": "support@buglife.com"
+  },
+  "homepage": "https://www.buglife.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/buglife/react-native-buglife.git"
+  },
+  "license": "MIT"
+}
