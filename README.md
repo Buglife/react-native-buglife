@@ -41,4 +41,24 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS).
 	Buglife.setInvocationOptions(Buglife.invocationOptionsFloatingButton);
 	```
 
+### Attachments
+
+Your application can include custom JSON attachments with each bug report. For example, to add an attachment solely to the next invocation of the bug reporter:
+
+```javascript
+var myData = { }; // This should be a JSON object with your data
+Buglife.addAttachmentWithJSON(myData, "MyData.json");
+```
+
+In some cases, you may wish to add an attachment on every invocation of the bug reporter; You can do so by subscribing to the `BuglifeAttachmentRequest` event:
+
+```javascript
+import { NativeAppEventEmitter } from 'react-native';
+
+NativeAppEventEmitter.addListener(Buglife.BuglifeAttachmentRequest, () => {
+  var appState = {"awesomeness": "Insanely awesome", "volume": 11};
+  Buglife.addAttachmentWithJSON(appState, "AppState.json");
+});
+```
+
 For advanced usage & features (customization, user identification, etc), check out the official Buglife [documentation](http://buglife.com/docs).
