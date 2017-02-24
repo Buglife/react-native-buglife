@@ -9,6 +9,14 @@
 #import <Buglife/Buglife.h>
 #import "RCTConvert.h"
 #import "RCTEventDispatcher.h"
+#import "RCTModuleData.h"
+
+// We need to expose some protected methods in order
+// to dispatch to the correct GCD queues
+@interface RCTBridge (RNBuglifeAdditions)
+- (RCTModuleData *)moduleDataForName:(NSString *)moduleName;
+- (void)dispatchBlock:(dispatch_block_t)block queue:(dispatch_queue_t)queue;;
+@end
 
 static NSString * const kBuglifeAttachmentRequestEventName = @"BuglifeAttachmentRequest";
 
@@ -24,8 +32,6 @@ static NSString * const kBuglifeAttachmentRequestEventName = @"BuglifeAttachment
 @end
 
 @implementation RNBuglife
-
-@synthesize bridge = _bridge;
 
 RCT_EXPORT_MODULE();
 
@@ -107,8 +113,30 @@ RCT_EXPORT_METHOD(addAttachmentWithJSON:(id)jsonObject filename:(NSString *)file
 
 - (void)buglife:(nonnull Buglife *)buglife handleAttachmentRequestWithCompletionHandler:(nonnull void (^)())completionHandler
 {
-    [_bridge.eventDispatcher sendAppEventWithName:kBuglifeAttachmentRequestEventName body:@{}];
-    completionHandler();
+    [self sendEventWithName:kBuglifeAttachmentRequestEventName body:@{}];
+    
+    RCTModuleData *moduleData = [self.bridge moduleDataForName:NSStringFromClass([self class])];
+    dispatch_queue_t queue = [moduleData methodQueue];
+    
+    // calling sendEventWithName:body: causes any Javascript that
+    // is listening to that event to be dispatched onto a serial queue.
+    // This double-dispatch is a hack to ensure that the completionHandler
+    // is called at the *end* of this serial queue, after all the JS event
+    // handlers complete.
+    __weak typeof(self) weakSelf = self;
+    [self.bridge dispatchBlock:^{
+        __strong RNBuglife *strongSelf = weakSelf;
+        if (strongSelf) {
+            [strongSelf.bridge dispatchBlock:^{
+                completionHandler();
+            } queue:queue];
+        }
+    } queue:RCTJSThread];
+}
+
+- (NSArray<NSString *> *)supportedEvents
+{
+    return @[kBuglifeAttachmentRequestEventName];
 }
 
 @end

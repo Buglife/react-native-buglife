@@ -53,9 +53,11 @@ Buglife.addAttachmentWithJSON(myData, "MyData.json");
 In some cases, you may wish to add an attachment on every invocation of the bug reporter; You can do so by subscribing to the `BuglifeAttachmentRequest` event:
 
 ```javascript
-import { NativeAppEventEmitter } from 'react-native';
+import { NativeModules, NativeEventEmitter } from 'react-native';
 
-NativeAppEventEmitter.addListener(Buglife.BuglifeAttachmentRequest, () => {
+const eventEmitter = new NativeEventEmitter(NativeModules.RNBuglife);
+
+eventEmitter.addListener(Buglife.BuglifeAttachmentRequest, () => {
   var appState = {"awesomeness": "Insanely awesome", "volume": 11};
   Buglife.addAttachmentWithJSON(appState, "AppState.json");
 });

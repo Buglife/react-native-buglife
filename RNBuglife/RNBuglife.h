@@ -6,8 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RCTEventEmitter.h"
 #import "RCTBridgeModule.h"
 
-@interface RNBuglife : NSObject <RCTBridgeModule>
+@interface RNBuglife : RCTEventEmitter <RCTBridgeModule>
 
 @end
