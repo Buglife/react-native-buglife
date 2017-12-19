@@ -1,6 +1,6 @@
 {
   "name": "react-native-buglife",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Buglife for React Native",
   "main": "index",
   "scripts": {
@@ -25,4 +25,7 @@
     "url": "git://github.com/buglife/react-native-buglife.git"
   },
   "license": "MIT"
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  }
 }

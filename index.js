@@ -3,5 +3,8 @@
  */
 'use strict';
 
-var { NativeModules, Platform } = require('react-native');
-module.exports = NativeModules.RNBuglife;
+import { NativeModules } from 'react-native';
+
+const { RNBuglife } = NativeModules;
+
+export default RNBuglife;

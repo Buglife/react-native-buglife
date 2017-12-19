@@ -21,11 +21,11 @@
 static NSString * const kBuglifeAttachmentRequestEventName = @"BuglifeAttachmentRequest";
 
 @implementation RCTConvert (InvocationOptions)
-    RCT_ENUM_CONVERTER(LIFEInvocationOptions, (@{ @"invocationOptionsNone" : @(LIFEInvocationOptionsNone),
-                                                @"invocationOptionsShake" : @(LIFEInvocationOptionsShake),
-                                                @"invocationOptionsScreenshot" : @(LIFEInvocationOptionsScreenshot),
-                                                @"invocationOptionsFloatingButton" : @(LIFEInvocationOptionsFloatingButton)}),
-                                                LIFEInvocationOptionsNone, integerValue)
+RCT_ENUM_CONVERTER(LIFEInvocationOptions, (@{ @"invocationOptionsNone" : @(LIFEInvocationOptionsNone),
+                                              @"invocationOptionsShake" : @(LIFEInvocationOptionsShake),
+                                              @"invocationOptionsScreenshot" : @(LIFEInvocationOptionsScreenshot),
+                                              @"invocationOptionsFloatingButton" : @(LIFEInvocationOptionsFloatingButton)}),
+                   LIFEInvocationOptionsNone, integerValue)
 @end
 
 @interface RNBuglife () <BuglifeDelegate>
@@ -77,12 +77,12 @@ RCT_EXPORT_METHOD(addAttachmentWithJSON:(id)jsonObject filename:(NSString *)file
 {
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:&error];
-
+    
     if (!data) {
         reject(error.domain, error.localizedDescription, error);
         return;
     }
-
+    
     [self _addAttachmentWithData:data type:LIFEAttachmentTypeIdentifierJSON filename:filename resolver:resolve rejecter:reject];
 }
 
@@ -101,14 +101,14 @@ RCT_EXPORT_METHOD(addAttachmentWithJSON:(id)jsonObject filename:(NSString *)file
 - (NSDictionary *)constantsToExport
 {
     return @{ @"invocationOptionsNone" : @(LIFEInvocationOptionsNone),
-                @"invocationOptionsShake" : @(LIFEInvocationOptionsShake),
-                @"invocationOptionsScreenshot" : @(LIFEInvocationOptionsScreenshot),
-                @"invocationOptionsFloatingButton" : @(LIFEInvocationOptionsFloatingButton),
-                @"attachmentTypeIdentifierText" : LIFEAttachmentTypeIdentifierText,
-                @"attachmentTypeIdentifierJSON" : LIFEAttachmentTypeIdentifierJSON,
-                @"attachmentTypeIdentifierSqlite" : LIFEAttachmentTypeIdentifierSqlite,
-                @"attachmentTypeIdentifierImage" : LIFEAttachmentTypeIdentifierImage,
-                @"BuglifeAttachmentRequest" : kBuglifeAttachmentRequestEventName};
+              @"invocationOptionsShake" : @(LIFEInvocationOptionsShake),
+              @"invocationOptionsScreenshot" : @(LIFEInvocationOptionsScreenshot),
+              @"invocationOptionsFloatingButton" : @(LIFEInvocationOptionsFloatingButton),
+              @"attachmentTypeIdentifierText" : LIFEAttachmentTypeIdentifierText,
+              @"attachmentTypeIdentifierJSON" : LIFEAttachmentTypeIdentifierJSON,
+              @"attachmentTypeIdentifierSqlite" : LIFEAttachmentTypeIdentifierSqlite,
+              @"attachmentTypeIdentifierImage" : LIFEAttachmentTypeIdentifierImage,
+              @"BuglifeAttachmentRequest" : kBuglifeAttachmentRequestEventName};
 };
 
 - (void)buglife:(nonnull Buglife *)buglife handleAttachmentRequestWithCompletionHandler:(nonnull void (^)())completionHandler
