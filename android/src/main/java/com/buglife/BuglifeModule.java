@@ -13,11 +13,14 @@ import com.buglife.sdk.Attachment;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class BuglifeModule extends ReactContextBaseJavaModule {
 
   public static final String INVOCATION_METHOD_NONE = "invocationOptionsNone";
   public static final String INVOCATION_METHOD_SHAKE = "invocationOptionsShake";
-  public static final String INVOCATION_METHOD_SCREENSHOT = "invocationOptionsScreenshot"
+  public static final String INVOCATION_METHOD_SCREENSHOT = "invocationOptionsScreenshot";
 
   private final ReactApplicationContext reactContext;
 
@@ -34,16 +37,16 @@ public class BuglifeModule extends ReactContextBaseJavaModule {
   @Override
   public Map<String, Object> getConstants() {
     final Map<String, Object> constants = new HashMap<>();
-    constants.put(INVOCATION_METHOD_NONE, Integer(InvocationMethod.NONE));
-    constants.put(INVOCATION_METHOD_SHAKE, Integer(InvocationMethod.SHAKE));
-    constants.put(INVOCATION_METHOD_SCREENSHOT, Integer(InvocationMethod.SCREENSHOT));
+    constants.put(INVOCATION_METHOD_NONE, InvocationMethod.NONE.getValue());
+    constants.put(INVOCATION_METHOD_SHAKE, InvocationMethod.SHAKE.getValue());
+    constants.put(INVOCATION_METHOD_SCREENSHOT, InvocationMethod.SCREENSHOT.getValue());
     return constants;
   }
 
 
   @ReactMethod
   public void startWithAPIKey(String apiKey) {
-    Buglife.initWithAPIKey(getCurrentActivity().getApplication(), apiKey);
+    Buglife.initWithApiKey(getCurrentActivity().getApplication(), apiKey);
   }
 
   @ReactMethod
@@ -53,7 +56,7 @@ public class BuglifeModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setInvocationOptions(Integer invocationMethod) {
-    Buglife.setInvocationMethod(InvocationMethod.values()[int(invocationMethod)]);
+    Buglife.setInvocationMethod(InvocationMethod.values()[invocationMethod]);
   } 
 
   @ReactMethod
@@ -74,7 +77,7 @@ public class BuglifeModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void addAttachmentWithJSON(JSONObject data, String attachmentFileName, Promise promise) {
     try {
-      Attachment attachment = Attachment.Builder(attachmentFileName, TYPE_JSON).build(data);
+      Attachment attachment = new Attachment.Builder(attachmentFileName, Attachment.TYPE_JSON).build(data);
       Buglife.addAttachment(attachment); // The android version of the API does not return a boolean
       promise.resolve(null);
     }
@@ -87,7 +90,7 @@ public class BuglifeModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void addAttachmentWithContents(String base64data, String attachmentFileName, Promise promise) {
     try {
-      Attachment attachment = Attachment.Builder(attachmentFileName, TYPE_TEXT).build(base64data);
+      Attachment attachment = new Attachment.Builder(attachmentFileName, Attachment.TYPE_TEXT).build(base64data);
       Buglife.addAttachment(attachment); // The android version of the API does not return a boolean
       promise.resolve(null);
     }
