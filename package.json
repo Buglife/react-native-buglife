@@ -1,8 +1,9 @@
 {
   "name": "react-native-buglife",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Buglife for React Native",
   "main": "index",
+  "nativePackage": true,
   "scripts": {
     "test": "flow"
   },
@@ -26,6 +27,15 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.41.2"
+    "react-native": ">=0.40"
+  },
+  "rnpm": {
+    "ios": {
+      "project": "ios/RNBuglife.xcodeproj"
+    },
+    "android": {
+      "packageInstance": "BuglifeModule.getPackage()",
+      "packageImportPath": "import com.buglife.BuglifeModule;"
+    }
   }
 }

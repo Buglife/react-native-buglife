@@ -6,6 +6,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
+import com.facebook.react.ReactPackage;
 
 import com.buglife.sdk.Buglife;
 import com.buglife.sdk.InvocationMethod;
@@ -27,6 +28,10 @@ public class BuglifeModule extends ReactContextBaseJavaModule {
   public BuglifeModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
+  }
+
+  public static ReactPackage getPackage() {
+    return new BuglifePackage();
   }
 
   @Override
