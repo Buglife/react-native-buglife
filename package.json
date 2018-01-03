@@ -24,7 +24,7 @@
     "type": "git",
     "url": "git://github.com/buglife/react-native-buglife.git"
   },
-  "license": "MIT"
+  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2"
   }
