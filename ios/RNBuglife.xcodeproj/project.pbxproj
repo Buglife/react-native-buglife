@@ -8,7 +8,136 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNBuglife.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNBuglife.m */; };
+		BC30E8EC1FFEDB9B009E76FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30E7E71FFEDB9A009E76FE /* AppDelegate.swift */; };
+		BC30E8ED1FFEDB9B009E76FE /* AwesomeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30E7E91FFEDB9A009E76FE /* AwesomeLabel.swift */; };
+		BC30E8EE1FFEDB9B009E76FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30E7EF1FFEDB9A009E76FE /* ViewController.swift */; };
+		BC30E8EF1FFEDB9B009E76FE /* Buglife-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E7FF1FFEDB9B009E76FE /* Buglife-dummy.m */; };
+		BC30E8F01FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8091FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m */; };
+		BC30E8F11FFEDB9B009E76FE /* Buglife+UIStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8151FFEDB9B009E76FE /* Buglife+UIStuff.m */; };
+		BC30E8F21FFEDB9B009E76FE /* LIFECategories.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8171FFEDB9B009E76FE /* LIFECategories.m */; };
+		BC30E8F31FFEDB9B009E76FE /* LIFECompatibilityUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8191FFEDB9B009E76FE /* LIFECompatibilityUtils.m */; };
+		BC30E8F41FFEDB9B009E76FE /* LIFEGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E81B1FFEDB9B009E76FE /* LIFEGeometry.m */; };
+		BC30E8F51FFEDB9B009E76FE /* NSArray+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E81E1FFEDB9B009E76FE /* NSArray+LIFEAdditions.m */; };
+		BC30E8F61FFEDB9B009E76FE /* NSError+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8201FFEDB9B009E76FE /* NSError+LIFEAdditions.m */; };
+		BC30E8F71FFEDB9B009E76FE /* NSLayoutConstraint+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8221FFEDB9B009E76FE /* NSLayoutConstraint+LIFEAdditions.m */; };
+		BC30E8F81FFEDB9B009E76FE /* NSMutableDictionary+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8241FFEDB9B009E76FE /* NSMutableDictionary+LIFEAdditions.m */; };
+		BC30E8F91FFEDB9B009E76FE /* NSString+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8261FFEDB9B009E76FE /* NSString+LIFEAdditions.m */; };
+		BC30E8FA1FFEDB9B009E76FE /* UIApplication+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8281FFEDB9B009E76FE /* UIApplication+LIFEAdditions.m */; };
+		BC30E8FB1FFEDB9B009E76FE /* UIBezierPath+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E82A1FFEDB9B009E76FE /* UIBezierPath+LIFEAdditions.m */; };
+		BC30E8FC1FFEDB9B009E76FE /* UIColor+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E82C1FFEDB9B009E76FE /* UIColor+LIFEAdditions.m */; };
+		BC30E8FD1FFEDB9B009E76FE /* UIDevice+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E82E1FFEDB9B009E76FE /* UIDevice+LIFEAdditions.m */; };
+		BC30E8FE1FFEDB9B009E76FE /* UIImage+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8301FFEDB9B009E76FE /* UIImage+LIFEAdditions.m */; };
+		BC30E8FF1FFEDB9B009E76FE /* UITableView+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8321FFEDB9B009E76FE /* UITableView+LIFEAdditions.m */; };
+		BC30E9001FFEDB9B009E76FE /* UITextView+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8341FFEDB9B009E76FE /* UITextView+LIFEAdditions.m */; };
+		BC30E9011FFEDB9B009E76FE /* UIView+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8361FFEDB9B009E76FE /* UIView+LIFEAdditions.m */; };
+		BC30E9021FFEDB9B009E76FE /* UIWindow+LIFEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8381FFEDB9B009E76FE /* UIWindow+LIFEAdditions.m */; };
+		BC30E9031FFEDB9B009E76FE /* Buglife+LocalizedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E83A1FFEDB9B009E76FE /* Buglife+LocalizedStrings.m */; };
+		BC30E9041FFEDB9B009E76FE /* Buglife.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E83C1FFEDB9B009E76FE /* Buglife.m */; };
+		BC30E9051FFEDB9B009E76FE /* LIFEAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E83F1FFEDB9B009E76FE /* LIFEAVPlayerViewController.m */; };
+		BC30E9061FFEDB9B009E76FE /* LIFEComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8411FFEDB9B009E76FE /* LIFEComponentPickerViewController.m */; };
+		BC30E9071FFEDB9B009E76FE /* LIFELogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8431FFEDB9B009E76FE /* LIFELogViewController.m */; };
+		BC30E9081FFEDB9B009E76FE /* LIFENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8451FFEDB9B009E76FE /* LIFENavigationController.m */; };
+		BC30E9091FFEDB9B009E76FE /* LIFEPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8471FFEDB9B009E76FE /* LIFEPickerViewController.m */; };
+		BC30E90A1FFEDB9B009E76FE /* LIFEReportTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8491FFEDB9B009E76FE /* LIFEReportTableViewController.m */; };
+		BC30E90B1FFEDB9B009E76FE /* LIFEScreenshotAnnotatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E84C1FFEDB9B009E76FE /* LIFEScreenshotAnnotatorViewController.m */; };
+		BC30E90C1FFEDB9B009E76FE /* LIFEStepsToReproTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E84E1FFEDB9B009E76FE /* LIFEStepsToReproTableViewController.m */; };
+		BC30E90D1FFEDB9B009E76FE /* LIFETextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8501FFEDB9B009E76FE /* LIFETextInputViewController.m */; };
+		BC30E90E1FFEDB9B009E76FE /* LIFEAwesomeLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8531FFEDB9B009E76FE /* LIFEAwesomeLogger.m */; };
+		BC30E90F1FFEDB9B009E76FE /* LIFEInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8551FFEDB9B009E76FE /* LIFEInputField.m */; };
+		BC30E9101FFEDB9B009E76FE /* LIFEPickerInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8571FFEDB9B009E76FE /* LIFEPickerInputField.m */; };
+		BC30E9111FFEDB9B009E76FE /* LIFETextInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8591FFEDB9B009E76FE /* LIFETextInputField.m */; };
+		BC30E9121FFEDB9B009E76FE /* LIFEAnnotatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E85C1FFEDB9B009E76FE /* LIFEAnnotatedImage.m */; };
+		BC30E9131FFEDB9B009E76FE /* LIFEAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E85E1FFEDB9B009E76FE /* LIFEAnnotation.m */; };
+		BC30E9141FFEDB9B009E76FE /* LIFEAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8601FFEDB9B009E76FE /* LIFEAppInfo.m */; };
+		BC30E9151FFEDB9B009E76FE /* LIFEAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8621FFEDB9B009E76FE /* LIFEAttribute.m */; };
+		BC30E9161FFEDB9B009E76FE /* LIFEDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8651FFEDB9B009E76FE /* LIFEDeviceInfo.m */; };
+		BC30E9171FFEDB9B009E76FE /* LIFEImageFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8671FFEDB9B009E76FE /* LIFEImageFormat.m */; };
+		BC30E9181FFEDB9B009E76FE /* LIFEReport.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8691FFEDB9B009E76FE /* LIFEReport.m */; };
+		BC30E9191FFEDB9B009E76FE /* LIFEReportAttachmentImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E86B1FFEDB9B009E76FE /* LIFEReportAttachmentImpl.m */; };
+		BC30E91A1FFEDB9B009E76FE /* LIFEReportOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E86D1FFEDB9B009E76FE /* LIFEReportOwner.m */; };
+		BC30E91B1FFEDB9B009E76FE /* LIFEReproStep.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E86F1FFEDB9B009E76FE /* LIFEReproStep.m */; };
+		BC30E91C1FFEDB9B009E76FE /* LIFEScreenshotContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8711FFEDB9B009E76FE /* LIFEScreenshotContext.m */; };
+		BC30E91D1FFEDB9B009E76FE /* LIFEVideoAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8741FFEDB9B009E76FE /* LIFEVideoAttachment.m */; };
+		BC30E91E1FFEDB9B009E76FE /* LIFEAppInfoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E87C1FFEDB9B009E76FE /* LIFEAppInfoProvider.m */; };
+		BC30E91F1FFEDB9B009E76FE /* LIFEAttachmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E87E1FFEDB9B009E76FE /* LIFEAttachmentManager.m */; };
+		BC30E9201FFEDB9B009E76FE /* LIFEAVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8801FFEDB9B009E76FE /* LIFEAVFoundation.m */; };
+		BC30E9211FFEDB9B009E76FE /* LIFEDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8821FFEDB9B009E76FE /* LIFEDataProvider.m */; };
+		BC30E9221FFEDB9B009E76FE /* LIFEDependencyLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8841FFEDB9B009E76FE /* LIFEDependencyLoader.m */; };
+		BC30E9231FFEDB9B009E76FE /* LIFEDeviceInfoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8861FFEDB9B009E76FE /* LIFEDeviceInfoProvider.m */; };
+		BC30E9241FFEDB9B009E76FE /* LIFEImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8881FFEDB9B009E76FE /* LIFEImagePickerController.m */; };
+		BC30E9251FFEDB9B009E76FE /* LIFEImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E88A1FFEDB9B009E76FE /* LIFEImageProcessor.m */; };
+		BC30E9261FFEDB9B009E76FE /* LIFELogFacility.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E88C1FFEDB9B009E76FE /* LIFELogFacility.m */; };
+		BC30E9271FFEDB9B009E76FE /* LIFENetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E88E1FFEDB9B009E76FE /* LIFENetworkManager.m */; };
+		BC30E9281FFEDB9B009E76FE /* LIFEReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8901FFEDB9B009E76FE /* LIFEReachability.m */; };
+		BC30E9291FFEDB9B009E76FE /* LIFERecordingShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8921FFEDB9B009E76FE /* LIFERecordingShrinker.m */; };
+		BC30E92A1FFEDB9B009E76FE /* LIFEReportBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8941FFEDB9B009E76FE /* LIFEReportBuilder.m */; };
+		BC30E92B1FFEDB9B009E76FE /* LIFESwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8961FFEDB9B009E76FE /* LIFESwizzler.m */; };
+		BC30E92C1FFEDB9B009E76FE /* LIFETelephonyNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8981FFEDB9B009E76FE /* LIFETelephonyNetworkInfo.m */; };
+		BC30E92D1FFEDB9B009E76FE /* LIFEUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E89A1FFEDB9B009E76FE /* LIFEUserDefaults.m */; };
+		BC30E92E1FFEDB9B009E76FE /* LIFEASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E89D1FFEDB9B009E76FE /* LIFEASLLogger.m */; };
+		BC30E92F1FFEDB9B009E76FE /* LIFEContextAwareLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E89F1FFEDB9B009E76FE /* LIFEContextAwareLogFormatter.m */; };
+		BC30E9301FFEDB9B009E76FE /* LIFEFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8A11FFEDB9B009E76FE /* LIFEFileLogger.m */; };
+		BC30E9311FFEDB9B009E76FE /* LIFEJSONLogFileFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8A31FFEDB9B009E76FE /* LIFEJSONLogFileFormatter.m */; };
+		BC30E9321FFEDB9B009E76FE /* LIFELog.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8A51FFEDB9B009E76FE /* LIFELog.m */; };
+		BC30E9331FFEDB9B009E76FE /* LIFELogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8A71FFEDB9B009E76FE /* LIFELogger.m */; };
+		BC30E9341FFEDB9B009E76FE /* LIFENotificationLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8AA1FFEDB9B009E76FE /* LIFENotificationLogger.m */; };
+		BC30E9351FFEDB9B009E76FE /* LIFETTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8AC1FFEDB9B009E76FE /* LIFETTYLogger.m */; };
+		BC30E9361FFEDB9B009E76FE /* LIFEAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8B01FFEDB9B009E76FE /* LIFEAnnotationView.m */; };
+		BC30E9371FFEDB9B009E76FE /* LIFEArrowAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8B21FFEDB9B009E76FE /* LIFEArrowAnnotationView.m */; };
+		BC30E9381FFEDB9B009E76FE /* LIFEBlurAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8B41FFEDB9B009E76FE /* LIFEBlurAnnotationView.m */; };
+		BC30E9391FFEDB9B009E76FE /* LIFELoupeAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8B61FFEDB9B009E76FE /* LIFELoupeAnnotationView.m */; };
+		BC30E93A1FFEDB9B009E76FE /* LIFEContinuousForceTouchGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8B91FFEDB9B009E76FE /* LIFEContinuousForceTouchGestureRecognizer.m */; };
+		BC30E93B1FFEDB9B009E76FE /* LIFEPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8BB1FFEDB9B009E76FE /* LIFEPanGestureRecognizer.m */; };
+		BC30E93C1FFEDB9B009E76FE /* LIFEAnnotatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8BD1FFEDB9B009E76FE /* LIFEAnnotatedImageView.m */; };
+		BC30E93D1FFEDB9B009E76FE /* LIFEAppearanceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8BF1FFEDB9B009E76FE /* LIFEAppearanceImpl.m */; };
+		BC30E93E1FFEDB9B009E76FE /* LIFEAttachmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8C11FFEDB9B009E76FE /* LIFEAttachmentView.m */; };
+		BC30E93F1FFEDB9B009E76FE /* LIFEBugButtonWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8C31FFEDB9B009E76FE /* LIFEBugButtonWindow.m */; };
+		BC30E9401FFEDB9B009E76FE /* LIFEComponentPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8C51FFEDB9B009E76FE /* LIFEComponentPickerCell.m */; };
+		BC30E9411FFEDB9B009E76FE /* LIFEFloatingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8C71FFEDB9B009E76FE /* LIFEFloatingButton.m */; };
+		BC30E9421FFEDB9B009E76FE /* LIFELocalizedStringProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8C91FFEDB9B009E76FE /* LIFELocalizedStringProvider.m */; };
+		BC30E9431FFEDB9B009E76FE /* LIFEMenuPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8CB1FFEDB9B009E76FE /* LIFEMenuPopoverView.m */; };
+		BC30E9441FFEDB9B009E76FE /* LIFEOverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8CD1FFEDB9B009E76FE /* LIFEOverlayWindow.m */; };
+		BC30E9451FFEDB9B009E76FE /* LIFEPoweredByBuglifeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8CF1FFEDB9B009E76FE /* LIFEPoweredByBuglifeView.m */; };
+		BC30E9461FFEDB9B009E76FE /* LIFEReportView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8D11FFEDB9B009E76FE /* LIFEReportView.m */; };
+		BC30E9471FFEDB9B009E76FE /* LIFEReportWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8D31FFEDB9B009E76FE /* LIFEReportWindow.m */; };
+		BC30E9481FFEDB9B009E76FE /* LIFEScreenshotAnnotatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8D51FFEDB9B009E76FE /* LIFEScreenshotAnnotatorView.m */; };
+		BC30E9491FFEDB9B009E76FE /* LIFEStepsToReproduceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8D71FFEDB9B009E76FE /* LIFEStepsToReproduceCell.m */; };
+		BC30E94A1FFEDB9B009E76FE /* LIFETextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8D91FFEDB9B009E76FE /* LIFETextFieldCell.m */; };
+		BC30E94B1FFEDB9B009E76FE /* LIFETitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8DB1FFEDB9B009E76FE /* LIFETitleCell.m */; };
+		BC30E94C1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8DD1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.m */; };
+		BC30E94D1FFEDB9B009E76FE /* AwesomeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8DF1FFEDB9B009E76FE /* AwesomeLogger.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC30E8E11FFEDB9B009E76FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC30E7F01FFEDB9A009E76FE /* Buglife Example.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCB796611FC62EF300305EF7;
+			remoteInfo = "Buglife Example";
+		};
+		BC30E8E41FFEDB9B009E76FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC30E7E21FFEDB9A009E76FE /* Buglife.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B7EAF7181FC8DAB000196024;
+			remoteInfo = Buglife;
+		};
+		BC30E8E81FFEDB9B009E76FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BECF8ED1D0C9F8D6879D0D8A3124102;
+			remoteInfo = Buglife;
+		};
+		BC30E8EA1FFEDB9B009E76FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A0C960EA9ED1092AC0F8C74F4F80B1C6;
+			remoteInfo = "Pods-Buglife Example";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -26,6 +155,237 @@
 		134814201AA4EA6300B7C361 /* libRNBuglife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNBuglife.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNBuglife.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBuglife.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNBuglife.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBuglife.m; sourceTree = "<group>"; };
+		BC30E7DE1FFEDB9A009E76FE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BC30E7E01FFEDB9A009E76FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC30E7E11FFEDB9A009E76FE /* Buglife.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Buglife.podspec; sourceTree = "<group>"; };
+		BC30E7E21FFEDB9A009E76FE /* Buglife.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Buglife.xcodeproj; sourceTree = "<group>"; };
+		BC30E7E71FFEDB9A009E76FE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC30E7E81FFEDB9A009E76FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC30E7E91FFEDB9A009E76FE /* AwesomeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeLabel.swift; sourceTree = "<group>"; };
+		BC30E7EB1FFEDB9A009E76FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC30E7ED1FFEDB9A009E76FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC30E7EE1FFEDB9A009E76FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC30E7EF1FFEDB9A009E76FE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC30E7F01FFEDB9A009E76FE /* Buglife Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Buglife Example.xcodeproj"; sourceTree = "<group>"; };
+		BC30E7F31FFEDB9B009E76FE /* Buglife Example.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = "Buglife Example.xcworkspace"; sourceTree = "<group>"; };
+		BC30E7F41FFEDB9B009E76FE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		BC30E7F51FFEDB9B009E76FE /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
+		BC30E7F81FFEDB9B009E76FE /* Buglife.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Buglife.podspec.json; sourceTree = "<group>"; };
+		BC30E7F91FFEDB9B009E76FE /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
+		BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
+		BC30E7FF1FFEDB9B009E76FE /* Buglife-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Buglife-dummy.m"; sourceTree = "<group>"; };
+		BC30E8001FFEDB9B009E76FE /* Buglife-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buglife-prefix.pch"; sourceTree = "<group>"; };
+		BC30E8011FFEDB9B009E76FE /* Buglife-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buglife-umbrella.h"; sourceTree = "<group>"; };
+		BC30E8021FFEDB9B009E76FE /* Buglife.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Buglife.modulemap; sourceTree = "<group>"; };
+		BC30E8031FFEDB9B009E76FE /* Buglife.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Buglife.xcconfig; sourceTree = "<group>"; };
+		BC30E8041FFEDB9B009E76FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC30E8061FFEDB9B009E76FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC30E8071FFEDB9B009E76FE /* Pods-Buglife Example-acknowledgements.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Pods-Buglife Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BC30E8081FFEDB9B009E76FE /* Pods-Buglife Example-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-Buglife Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC30E8091FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pods-Buglife Example-dummy.m"; sourceTree = "<group>"; };
+		BC30E80A1FFEDB9B009E76FE /* Pods-Buglife Example-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-Buglife Example-frameworks.sh"; sourceTree = "<group>"; };
+		BC30E80B1FFEDB9B009E76FE /* Pods-Buglife Example-resources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-Buglife Example-resources.sh"; sourceTree = "<group>"; };
+		BC30E80C1FFEDB9B009E76FE /* Pods-Buglife Example-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-Buglife Example-umbrella.h"; sourceTree = "<group>"; };
+		BC30E80D1FFEDB9B009E76FE /* Pods-Buglife Example.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-Buglife Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BC30E80E1FFEDB9B009E76FE /* Pods-Buglife Example.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Buglife Example.modulemap"; sourceTree = "<group>"; };
+		BC30E80F1FFEDB9B009E76FE /* Pods-Buglife Example.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-Buglife Example.release.xcconfig"; sourceTree = "<group>"; };
+		BC30E8101FFEDB9B009E76FE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BC30E8111FFEDB9B009E76FE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BC30E8141FFEDB9B009E76FE /* Buglife+UIStuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buglife+UIStuff.h"; sourceTree = "<group>"; };
+		BC30E8151FFEDB9B009E76FE /* Buglife+UIStuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Buglife+UIStuff.m"; sourceTree = "<group>"; };
+		BC30E8161FFEDB9B009E76FE /* LIFECategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFECategories.h; sourceTree = "<group>"; };
+		BC30E8171FFEDB9B009E76FE /* LIFECategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFECategories.m; sourceTree = "<group>"; };
+		BC30E8181FFEDB9B009E76FE /* LIFECompatibilityUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFECompatibilityUtils.h; sourceTree = "<group>"; };
+		BC30E8191FFEDB9B009E76FE /* LIFECompatibilityUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFECompatibilityUtils.m; sourceTree = "<group>"; };
+		BC30E81A1FFEDB9B009E76FE /* LIFEGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEGeometry.h; sourceTree = "<group>"; };
+		BC30E81B1FFEDB9B009E76FE /* LIFEGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEGeometry.m; sourceTree = "<group>"; };
+		BC30E81C1FFEDB9B009E76FE /* LIFEMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEMacros.h; sourceTree = "<group>"; };
+		BC30E81D1FFEDB9B009E76FE /* NSArray+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E81E1FFEDB9B009E76FE /* NSArray+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E81F1FFEDB9B009E76FE /* NSError+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8201FFEDB9B009E76FE /* NSError+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8211FFEDB9B009E76FE /* NSLayoutConstraint+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8221FFEDB9B009E76FE /* NSLayoutConstraint+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8231FFEDB9B009E76FE /* NSMutableDictionary+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8241FFEDB9B009E76FE /* NSMutableDictionary+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8251FFEDB9B009E76FE /* NSString+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8261FFEDB9B009E76FE /* NSString+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8271FFEDB9B009E76FE /* UIApplication+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8281FFEDB9B009E76FE /* UIApplication+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8291FFEDB9B009E76FE /* UIBezierPath+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E82A1FFEDB9B009E76FE /* UIBezierPath+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E82B1FFEDB9B009E76FE /* UIColor+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E82C1FFEDB9B009E76FE /* UIColor+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E82D1FFEDB9B009E76FE /* UIDevice+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E82E1FFEDB9B009E76FE /* UIDevice+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E82F1FFEDB9B009E76FE /* UIImage+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8301FFEDB9B009E76FE /* UIImage+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8311FFEDB9B009E76FE /* UITableView+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8321FFEDB9B009E76FE /* UITableView+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8331FFEDB9B009E76FE /* UITextView+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8341FFEDB9B009E76FE /* UITextView+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8351FFEDB9B009E76FE /* UIView+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8361FFEDB9B009E76FE /* UIView+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8371FFEDB9B009E76FE /* UIWindow+LIFEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+LIFEAdditions.h"; sourceTree = "<group>"; };
+		BC30E8381FFEDB9B009E76FE /* UIWindow+LIFEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LIFEAdditions.m"; sourceTree = "<group>"; };
+		BC30E8391FFEDB9B009E76FE /* Buglife+LocalizedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buglife+LocalizedStrings.h"; sourceTree = "<group>"; };
+		BC30E83A1FFEDB9B009E76FE /* Buglife+LocalizedStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Buglife+LocalizedStrings.m"; sourceTree = "<group>"; };
+		BC30E83B1FFEDB9B009E76FE /* Buglife.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buglife.h; sourceTree = "<group>"; };
+		BC30E83C1FFEDB9B009E76FE /* Buglife.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buglife.m; sourceTree = "<group>"; };
+		BC30E83E1FFEDB9B009E76FE /* LIFEAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAVPlayerViewController.h; sourceTree = "<group>"; };
+		BC30E83F1FFEDB9B009E76FE /* LIFEAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAVPlayerViewController.m; sourceTree = "<group>"; };
+		BC30E8401FFEDB9B009E76FE /* LIFEComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEComponentPickerViewController.h; sourceTree = "<group>"; };
+		BC30E8411FFEDB9B009E76FE /* LIFEComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEComponentPickerViewController.m; sourceTree = "<group>"; };
+		BC30E8421FFEDB9B009E76FE /* LIFELogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFELogViewController.h; sourceTree = "<group>"; };
+		BC30E8431FFEDB9B009E76FE /* LIFELogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFELogViewController.m; sourceTree = "<group>"; };
+		BC30E8441FFEDB9B009E76FE /* LIFENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFENavigationController.h; sourceTree = "<group>"; };
+		BC30E8451FFEDB9B009E76FE /* LIFENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFENavigationController.m; sourceTree = "<group>"; };
+		BC30E8461FFEDB9B009E76FE /* LIFEPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEPickerViewController.h; sourceTree = "<group>"; };
+		BC30E8471FFEDB9B009E76FE /* LIFEPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEPickerViewController.m; sourceTree = "<group>"; };
+		BC30E8481FFEDB9B009E76FE /* LIFEReportTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReportTableViewController.h; sourceTree = "<group>"; };
+		BC30E8491FFEDB9B009E76FE /* LIFEReportTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReportTableViewController.m; sourceTree = "<group>"; };
+		BC30E84A1FFEDB9B009E76FE /* LIFEReportViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReportViewControllerDelegate.h; sourceTree = "<group>"; };
+		BC30E84B1FFEDB9B009E76FE /* LIFEScreenshotAnnotatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEScreenshotAnnotatorViewController.h; sourceTree = "<group>"; };
+		BC30E84C1FFEDB9B009E76FE /* LIFEScreenshotAnnotatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEScreenshotAnnotatorViewController.m; sourceTree = "<group>"; };
+		BC30E84D1FFEDB9B009E76FE /* LIFEStepsToReproTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEStepsToReproTableViewController.h; sourceTree = "<group>"; };
+		BC30E84E1FFEDB9B009E76FE /* LIFEStepsToReproTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEStepsToReproTableViewController.m; sourceTree = "<group>"; };
+		BC30E84F1FFEDB9B009E76FE /* LIFETextInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFETextInputViewController.h; sourceTree = "<group>"; };
+		BC30E8501FFEDB9B009E76FE /* LIFETextInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFETextInputViewController.m; sourceTree = "<group>"; };
+		BC30E8511FFEDB9B009E76FE /* LIFEAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAppearance.h; sourceTree = "<group>"; };
+		BC30E8521FFEDB9B009E76FE /* LIFEAwesomeLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAwesomeLogger.h; sourceTree = "<group>"; };
+		BC30E8531FFEDB9B009E76FE /* LIFEAwesomeLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAwesomeLogger.m; sourceTree = "<group>"; };
+		BC30E8541FFEDB9B009E76FE /* LIFEInputField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEInputField.h; sourceTree = "<group>"; };
+		BC30E8551FFEDB9B009E76FE /* LIFEInputField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEInputField.m; sourceTree = "<group>"; };
+		BC30E8561FFEDB9B009E76FE /* LIFEPickerInputField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEPickerInputField.h; sourceTree = "<group>"; };
+		BC30E8571FFEDB9B009E76FE /* LIFEPickerInputField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEPickerInputField.m; sourceTree = "<group>"; };
+		BC30E8581FFEDB9B009E76FE /* LIFETextInputField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFETextInputField.h; sourceTree = "<group>"; };
+		BC30E8591FFEDB9B009E76FE /* LIFETextInputField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFETextInputField.m; sourceTree = "<group>"; };
+		BC30E85B1FFEDB9B009E76FE /* LIFEAnnotatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAnnotatedImage.h; sourceTree = "<group>"; };
+		BC30E85C1FFEDB9B009E76FE /* LIFEAnnotatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAnnotatedImage.m; sourceTree = "<group>"; };
+		BC30E85D1FFEDB9B009E76FE /* LIFEAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAnnotation.h; sourceTree = "<group>"; };
+		BC30E85E1FFEDB9B009E76FE /* LIFEAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAnnotation.m; sourceTree = "<group>"; };
+		BC30E85F1FFEDB9B009E76FE /* LIFEAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAppInfo.h; sourceTree = "<group>"; };
+		BC30E8601FFEDB9B009E76FE /* LIFEAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAppInfo.m; sourceTree = "<group>"; };
+		BC30E8611FFEDB9B009E76FE /* LIFEAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAttribute.h; sourceTree = "<group>"; };
+		BC30E8621FFEDB9B009E76FE /* LIFEAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAttribute.m; sourceTree = "<group>"; };
+		BC30E8631FFEDB9B009E76FE /* LIFEDeviceBatteryState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEDeviceBatteryState.h; sourceTree = "<group>"; };
+		BC30E8641FFEDB9B009E76FE /* LIFEDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEDeviceInfo.h; sourceTree = "<group>"; };
+		BC30E8651FFEDB9B009E76FE /* LIFEDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEDeviceInfo.m; sourceTree = "<group>"; };
+		BC30E8661FFEDB9B009E76FE /* LIFEImageFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEImageFormat.h; sourceTree = "<group>"; };
+		BC30E8671FFEDB9B009E76FE /* LIFEImageFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEImageFormat.m; sourceTree = "<group>"; };
+		BC30E8681FFEDB9B009E76FE /* LIFEReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReport.h; sourceTree = "<group>"; };
+		BC30E8691FFEDB9B009E76FE /* LIFEReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReport.m; sourceTree = "<group>"; };
+		BC30E86A1FFEDB9B009E76FE /* LIFEReportAttachmentImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReportAttachmentImpl.h; sourceTree = "<group>"; };
+		BC30E86B1FFEDB9B009E76FE /* LIFEReportAttachmentImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReportAttachmentImpl.m; sourceTree = "<group>"; };
+		BC30E86C1FFEDB9B009E76FE /* LIFEReportOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReportOwner.h; sourceTree = "<group>"; };
+		BC30E86D1FFEDB9B009E76FE /* LIFEReportOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReportOwner.m; sourceTree = "<group>"; };
+		BC30E86E1FFEDB9B009E76FE /* LIFEReproStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReproStep.h; sourceTree = "<group>"; };
+		BC30E86F1FFEDB9B009E76FE /* LIFEReproStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReproStep.m; sourceTree = "<group>"; };
+		BC30E8701FFEDB9B009E76FE /* LIFEScreenshotContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEScreenshotContext.h; sourceTree = "<group>"; };
+		BC30E8711FFEDB9B009E76FE /* LIFEScreenshotContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEScreenshotContext.m; sourceTree = "<group>"; };
+		BC30E8721FFEDB9B009E76FE /* LIFEUserFacingAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEUserFacingAttachment.h; sourceTree = "<group>"; };
+		BC30E8731FFEDB9B009E76FE /* LIFEVideoAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEVideoAttachment.h; sourceTree = "<group>"; };
+		BC30E8741FFEDB9B009E76FE /* LIFEVideoAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEVideoAttachment.m; sourceTree = "<group>"; };
+		BC30E8761FFEDB9B009E76FE /* Buglife+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buglife+Protected.h"; sourceTree = "<group>"; };
+		BC30E8771FFEDB9B009E76FE /* LIFEAwesomeLogger+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LIFEAwesomeLogger+Protected.h"; sourceTree = "<group>"; };
+		BC30E8781FFEDB9B009E76FE /* LIFEInputField+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LIFEInputField+Protected.h"; sourceTree = "<group>"; };
+		BC30E8791FFEDB9B009E76FE /* LIFEPickerInputField+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LIFEPickerInputField+Protected.h"; sourceTree = "<group>"; };
+		BC30E87B1FFEDB9B009E76FE /* LIFEAppInfoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAppInfoProvider.h; sourceTree = "<group>"; };
+		BC30E87C1FFEDB9B009E76FE /* LIFEAppInfoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAppInfoProvider.m; sourceTree = "<group>"; };
+		BC30E87D1FFEDB9B009E76FE /* LIFEAttachmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAttachmentManager.h; sourceTree = "<group>"; };
+		BC30E87E1FFEDB9B009E76FE /* LIFEAttachmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAttachmentManager.m; sourceTree = "<group>"; };
+		BC30E87F1FFEDB9B009E76FE /* LIFEAVFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAVFoundation.h; sourceTree = "<group>"; };
+		BC30E8801FFEDB9B009E76FE /* LIFEAVFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAVFoundation.m; sourceTree = "<group>"; };
+		BC30E8811FFEDB9B009E76FE /* LIFEDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEDataProvider.h; sourceTree = "<group>"; };
+		BC30E8821FFEDB9B009E76FE /* LIFEDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEDataProvider.m; sourceTree = "<group>"; };
+		BC30E8831FFEDB9B009E76FE /* LIFEDependencyLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEDependencyLoader.h; sourceTree = "<group>"; };
+		BC30E8841FFEDB9B009E76FE /* LIFEDependencyLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEDependencyLoader.m; sourceTree = "<group>"; };
+		BC30E8851FFEDB9B009E76FE /* LIFEDeviceInfoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEDeviceInfoProvider.h; sourceTree = "<group>"; };
+		BC30E8861FFEDB9B009E76FE /* LIFEDeviceInfoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEDeviceInfoProvider.m; sourceTree = "<group>"; };
+		BC30E8871FFEDB9B009E76FE /* LIFEImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEImagePickerController.h; sourceTree = "<group>"; };
+		BC30E8881FFEDB9B009E76FE /* LIFEImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEImagePickerController.m; sourceTree = "<group>"; };
+		BC30E8891FFEDB9B009E76FE /* LIFEImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEImageProcessor.h; sourceTree = "<group>"; };
+		BC30E88A1FFEDB9B009E76FE /* LIFEImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEImageProcessor.m; sourceTree = "<group>"; };
+		BC30E88B1FFEDB9B009E76FE /* LIFELogFacility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFELogFacility.h; sourceTree = "<group>"; };
+		BC30E88C1FFEDB9B009E76FE /* LIFELogFacility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFELogFacility.m; sourceTree = "<group>"; };
+		BC30E88D1FFEDB9B009E76FE /* LIFENetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFENetworkManager.h; sourceTree = "<group>"; };
+		BC30E88E1FFEDB9B009E76FE /* LIFENetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFENetworkManager.m; sourceTree = "<group>"; };
+		BC30E88F1FFEDB9B009E76FE /* LIFEReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReachability.h; sourceTree = "<group>"; };
+		BC30E8901FFEDB9B009E76FE /* LIFEReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReachability.m; sourceTree = "<group>"; };
+		BC30E8911FFEDB9B009E76FE /* LIFERecordingShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFERecordingShrinker.h; sourceTree = "<group>"; };
+		BC30E8921FFEDB9B009E76FE /* LIFERecordingShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFERecordingShrinker.m; sourceTree = "<group>"; };
+		BC30E8931FFEDB9B009E76FE /* LIFEReportBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReportBuilder.h; sourceTree = "<group>"; };
+		BC30E8941FFEDB9B009E76FE /* LIFEReportBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReportBuilder.m; sourceTree = "<group>"; };
+		BC30E8951FFEDB9B009E76FE /* LIFESwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFESwizzler.h; sourceTree = "<group>"; };
+		BC30E8961FFEDB9B009E76FE /* LIFESwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFESwizzler.m; sourceTree = "<group>"; };
+		BC30E8971FFEDB9B009E76FE /* LIFETelephonyNetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFETelephonyNetworkInfo.h; sourceTree = "<group>"; };
+		BC30E8981FFEDB9B009E76FE /* LIFETelephonyNetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFETelephonyNetworkInfo.m; sourceTree = "<group>"; };
+		BC30E8991FFEDB9B009E76FE /* LIFEUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEUserDefaults.h; sourceTree = "<group>"; };
+		BC30E89A1FFEDB9B009E76FE /* LIFEUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEUserDefaults.m; sourceTree = "<group>"; };
+		BC30E89C1FFEDB9B009E76FE /* LIFEASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEASLLogger.h; sourceTree = "<group>"; };
+		BC30E89D1FFEDB9B009E76FE /* LIFEASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEASLLogger.m; sourceTree = "<group>"; };
+		BC30E89E1FFEDB9B009E76FE /* LIFEContextAwareLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEContextAwareLogFormatter.h; sourceTree = "<group>"; };
+		BC30E89F1FFEDB9B009E76FE /* LIFEContextAwareLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEContextAwareLogFormatter.m; sourceTree = "<group>"; };
+		BC30E8A01FFEDB9B009E76FE /* LIFEFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEFileLogger.h; sourceTree = "<group>"; };
+		BC30E8A11FFEDB9B009E76FE /* LIFEFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEFileLogger.m; sourceTree = "<group>"; };
+		BC30E8A21FFEDB9B009E76FE /* LIFEJSONLogFileFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEJSONLogFileFormatter.h; sourceTree = "<group>"; };
+		BC30E8A31FFEDB9B009E76FE /* LIFEJSONLogFileFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEJSONLogFileFormatter.m; sourceTree = "<group>"; };
+		BC30E8A41FFEDB9B009E76FE /* LIFELog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFELog.h; sourceTree = "<group>"; };
+		BC30E8A51FFEDB9B009E76FE /* LIFELog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFELog.m; sourceTree = "<group>"; };
+		BC30E8A61FFEDB9B009E76FE /* LIFELogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFELogger.h; sourceTree = "<group>"; };
+		BC30E8A71FFEDB9B009E76FE /* LIFELogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFELogger.m; sourceTree = "<group>"; };
+		BC30E8A81FFEDB9B009E76FE /* LIFELogMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFELogMacros.h; sourceTree = "<group>"; };
+		BC30E8A91FFEDB9B009E76FE /* LIFENotificationLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFENotificationLogger.h; sourceTree = "<group>"; };
+		BC30E8AA1FFEDB9B009E76FE /* LIFENotificationLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFENotificationLogger.m; sourceTree = "<group>"; };
+		BC30E8AB1FFEDB9B009E76FE /* LIFETTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFETTYLogger.h; sourceTree = "<group>"; };
+		BC30E8AC1FFEDB9B009E76FE /* LIFETTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFETTYLogger.m; sourceTree = "<group>"; };
+		BC30E8AF1FFEDB9B009E76FE /* LIFEAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAnnotationView.h; sourceTree = "<group>"; };
+		BC30E8B01FFEDB9B009E76FE /* LIFEAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAnnotationView.m; sourceTree = "<group>"; };
+		BC30E8B11FFEDB9B009E76FE /* LIFEArrowAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEArrowAnnotationView.h; sourceTree = "<group>"; };
+		BC30E8B21FFEDB9B009E76FE /* LIFEArrowAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEArrowAnnotationView.m; sourceTree = "<group>"; };
+		BC30E8B31FFEDB9B009E76FE /* LIFEBlurAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEBlurAnnotationView.h; sourceTree = "<group>"; };
+		BC30E8B41FFEDB9B009E76FE /* LIFEBlurAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEBlurAnnotationView.m; sourceTree = "<group>"; };
+		BC30E8B51FFEDB9B009E76FE /* LIFELoupeAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFELoupeAnnotationView.h; sourceTree = "<group>"; };
+		BC30E8B61FFEDB9B009E76FE /* LIFELoupeAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFELoupeAnnotationView.m; sourceTree = "<group>"; };
+		BC30E8B81FFEDB9B009E76FE /* LIFEContinuousForceTouchGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEContinuousForceTouchGestureRecognizer.h; sourceTree = "<group>"; };
+		BC30E8B91FFEDB9B009E76FE /* LIFEContinuousForceTouchGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEContinuousForceTouchGestureRecognizer.m; sourceTree = "<group>"; };
+		BC30E8BA1FFEDB9B009E76FE /* LIFEPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEPanGestureRecognizer.h; sourceTree = "<group>"; };
+		BC30E8BB1FFEDB9B009E76FE /* LIFEPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEPanGestureRecognizer.m; sourceTree = "<group>"; };
+		BC30E8BC1FFEDB9B009E76FE /* LIFEAnnotatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAnnotatedImageView.h; sourceTree = "<group>"; };
+		BC30E8BD1FFEDB9B009E76FE /* LIFEAnnotatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAnnotatedImageView.m; sourceTree = "<group>"; };
+		BC30E8BE1FFEDB9B009E76FE /* LIFEAppearanceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAppearanceImpl.h; sourceTree = "<group>"; };
+		BC30E8BF1FFEDB9B009E76FE /* LIFEAppearanceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAppearanceImpl.m; sourceTree = "<group>"; };
+		BC30E8C01FFEDB9B009E76FE /* LIFEAttachmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEAttachmentView.h; sourceTree = "<group>"; };
+		BC30E8C11FFEDB9B009E76FE /* LIFEAttachmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEAttachmentView.m; sourceTree = "<group>"; };
+		BC30E8C21FFEDB9B009E76FE /* LIFEBugButtonWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEBugButtonWindow.h; sourceTree = "<group>"; };
+		BC30E8C31FFEDB9B009E76FE /* LIFEBugButtonWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEBugButtonWindow.m; sourceTree = "<group>"; };
+		BC30E8C41FFEDB9B009E76FE /* LIFEComponentPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEComponentPickerCell.h; sourceTree = "<group>"; };
+		BC30E8C51FFEDB9B009E76FE /* LIFEComponentPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEComponentPickerCell.m; sourceTree = "<group>"; };
+		BC30E8C61FFEDB9B009E76FE /* LIFEFloatingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEFloatingButton.h; sourceTree = "<group>"; };
+		BC30E8C71FFEDB9B009E76FE /* LIFEFloatingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEFloatingButton.m; sourceTree = "<group>"; };
+		BC30E8C81FFEDB9B009E76FE /* LIFELocalizedStringProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFELocalizedStringProvider.h; sourceTree = "<group>"; };
+		BC30E8C91FFEDB9B009E76FE /* LIFELocalizedStringProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFELocalizedStringProvider.m; sourceTree = "<group>"; };
+		BC30E8CA1FFEDB9B009E76FE /* LIFEMenuPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEMenuPopoverView.h; sourceTree = "<group>"; };
+		BC30E8CB1FFEDB9B009E76FE /* LIFEMenuPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEMenuPopoverView.m; sourceTree = "<group>"; };
+		BC30E8CC1FFEDB9B009E76FE /* LIFEOverlayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEOverlayWindow.h; sourceTree = "<group>"; };
+		BC30E8CD1FFEDB9B009E76FE /* LIFEOverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEOverlayWindow.m; sourceTree = "<group>"; };
+		BC30E8CE1FFEDB9B009E76FE /* LIFEPoweredByBuglifeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEPoweredByBuglifeView.h; sourceTree = "<group>"; };
+		BC30E8CF1FFEDB9B009E76FE /* LIFEPoweredByBuglifeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEPoweredByBuglifeView.m; sourceTree = "<group>"; };
+		BC30E8D01FFEDB9B009E76FE /* LIFEReportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReportView.h; sourceTree = "<group>"; };
+		BC30E8D11FFEDB9B009E76FE /* LIFEReportView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReportView.m; sourceTree = "<group>"; };
+		BC30E8D21FFEDB9B009E76FE /* LIFEReportWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEReportWindow.h; sourceTree = "<group>"; };
+		BC30E8D31FFEDB9B009E76FE /* LIFEReportWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEReportWindow.m; sourceTree = "<group>"; };
+		BC30E8D41FFEDB9B009E76FE /* LIFEScreenshotAnnotatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEScreenshotAnnotatorView.h; sourceTree = "<group>"; };
+		BC30E8D51FFEDB9B009E76FE /* LIFEScreenshotAnnotatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEScreenshotAnnotatorView.m; sourceTree = "<group>"; };
+		BC30E8D61FFEDB9B009E76FE /* LIFEStepsToReproduceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEStepsToReproduceCell.h; sourceTree = "<group>"; };
+		BC30E8D71FFEDB9B009E76FE /* LIFEStepsToReproduceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEStepsToReproduceCell.m; sourceTree = "<group>"; };
+		BC30E8D81FFEDB9B009E76FE /* LIFETextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFETextFieldCell.h; sourceTree = "<group>"; };
+		BC30E8D91FFEDB9B009E76FE /* LIFETextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFETextFieldCell.m; sourceTree = "<group>"; };
+		BC30E8DA1FFEDB9B009E76FE /* LIFETitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFETitleCell.h; sourceTree = "<group>"; };
+		BC30E8DB1FFEDB9B009E76FE /* LIFETitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFETitleCell.m; sourceTree = "<group>"; };
+		BC30E8DC1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEWhatHappenedTextView.h; sourceTree = "<group>"; };
+		BC30E8DD1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEWhatHappenedTextView.m; sourceTree = "<group>"; };
+		BC30E8DF1FFEDB9B009E76FE /* AwesomeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +410,426 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				BC30E7DD1FFEDB9A009E76FE /* Buglife-iOS */,
 				B3E7B5881CC2AC0600A0062D /* RNBuglife.h */,
 				B3E7B5891CC2AC0600A0062D /* RNBuglife.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		BC30E7DD1FFEDB9A009E76FE /* Buglife-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E7DE1FFEDB9A009E76FE /* .gitignore */,
+				BC30E7DF1FFEDB9A009E76FE /* Buglife */,
+				BC30E7E11FFEDB9A009E76FE /* Buglife.podspec */,
+				BC30E7E21FFEDB9A009E76FE /* Buglife.xcodeproj */,
+				BC30E7E51FFEDB9A009E76FE /* Example */,
+				BC30E8101FFEDB9B009E76FE /* LICENSE */,
+				BC30E8111FFEDB9B009E76FE /* README.md */,
+				BC30E8121FFEDB9B009E76FE /* Source */,
+				BC30E8DE1FFEDB9B009E76FE /* Swift */,
+			);
+			path = "Buglife-iOS";
+			sourceTree = "<group>";
+		};
+		BC30E7DF1FFEDB9A009E76FE /* Buglife */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E7E01FFEDB9A009E76FE /* Info.plist */,
+			);
+			path = Buglife;
+			sourceTree = "<group>";
+		};
+		BC30E7E31FFEDB9A009E76FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8E51FFEDB9B009E76FE /* Buglife.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC30E7E51FFEDB9A009E76FE /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E7E61FFEDB9A009E76FE /* Buglife Example */,
+				BC30E7F01FFEDB9A009E76FE /* Buglife Example.xcodeproj */,
+				BC30E7F31FFEDB9B009E76FE /* Buglife Example.xcworkspace */,
+				BC30E7F41FFEDB9B009E76FE /* Podfile */,
+				BC30E7F51FFEDB9B009E76FE /* Podfile.lock */,
+				BC30E7F61FFEDB9B009E76FE /* Pods */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		BC30E7E61FFEDB9A009E76FE /* Buglife Example */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E7E71FFEDB9A009E76FE /* AppDelegate.swift */,
+				BC30E7E81FFEDB9A009E76FE /* Assets.xcassets */,
+				BC30E7E91FFEDB9A009E76FE /* AwesomeLabel.swift */,
+				BC30E7EA1FFEDB9A009E76FE /* LaunchScreen.storyboard */,
+				BC30E7EC1FFEDB9A009E76FE /* Main.storyboard */,
+				BC30E7EE1FFEDB9A009E76FE /* Info.plist */,
+				BC30E7EF1FFEDB9A009E76FE /* ViewController.swift */,
+			);
+			path = "Buglife Example";
+			sourceTree = "<group>";
+		};
+		BC30E7F11FFEDB9A009E76FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8E21FFEDB9B009E76FE /* Buglife Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC30E7F61FFEDB9B009E76FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E7F71FFEDB9B009E76FE /* Local Podspecs */,
+				BC30E7F91FFEDB9B009E76FE /* Manifest.lock */,
+				BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */,
+				BC30E7FD1FFEDB9B009E76FE /* Target Support Files */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC30E7F71FFEDB9B009E76FE /* Local Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E7F81FFEDB9B009E76FE /* Buglife.podspec.json */,
+			);
+			path = "Local Podspecs";
+			sourceTree = "<group>";
+		};
+		BC30E7FB1FFEDB9B009E76FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8E91FFEDB9B009E76FE /* Buglife.framework */,
+				BC30E8EB1FFEDB9B009E76FE /* Pods_Buglife_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC30E7FD1FFEDB9B009E76FE /* Target Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E7FE1FFEDB9B009E76FE /* Buglife */,
+				BC30E8051FFEDB9B009E76FE /* Pods-Buglife Example */,
+			);
+			path = "Target Support Files";
+			sourceTree = "<group>";
+		};
+		BC30E7FE1FFEDB9B009E76FE /* Buglife */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E7FF1FFEDB9B009E76FE /* Buglife-dummy.m */,
+				BC30E8001FFEDB9B009E76FE /* Buglife-prefix.pch */,
+				BC30E8011FFEDB9B009E76FE /* Buglife-umbrella.h */,
+				BC30E8021FFEDB9B009E76FE /* Buglife.modulemap */,
+				BC30E8031FFEDB9B009E76FE /* Buglife.xcconfig */,
+				BC30E8041FFEDB9B009E76FE /* Info.plist */,
+			);
+			path = Buglife;
+			sourceTree = "<group>";
+		};
+		BC30E8051FFEDB9B009E76FE /* Pods-Buglife Example */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8061FFEDB9B009E76FE /* Info.plist */,
+				BC30E8071FFEDB9B009E76FE /* Pods-Buglife Example-acknowledgements.markdown */,
+				BC30E8081FFEDB9B009E76FE /* Pods-Buglife Example-acknowledgements.plist */,
+				BC30E8091FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m */,
+				BC30E80A1FFEDB9B009E76FE /* Pods-Buglife Example-frameworks.sh */,
+				BC30E80B1FFEDB9B009E76FE /* Pods-Buglife Example-resources.sh */,
+				BC30E80C1FFEDB9B009E76FE /* Pods-Buglife Example-umbrella.h */,
+				BC30E80D1FFEDB9B009E76FE /* Pods-Buglife Example.debug.xcconfig */,
+				BC30E80E1FFEDB9B009E76FE /* Pods-Buglife Example.modulemap */,
+				BC30E80F1FFEDB9B009E76FE /* Pods-Buglife Example.release.xcconfig */,
+			);
+			path = "Pods-Buglife Example";
+			sourceTree = "<group>";
+		};
+		BC30E8121FFEDB9B009E76FE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8131FFEDB9B009E76FE /* Additions */,
+				BC30E8391FFEDB9B009E76FE /* Buglife+LocalizedStrings.h */,
+				BC30E83A1FFEDB9B009E76FE /* Buglife+LocalizedStrings.m */,
+				BC30E83B1FFEDB9B009E76FE /* Buglife.h */,
+				BC30E83C1FFEDB9B009E76FE /* Buglife.m */,
+				BC30E83D1FFEDB9B009E76FE /* Controllers */,
+				BC30E8511FFEDB9B009E76FE /* LIFEAppearance.h */,
+				BC30E8521FFEDB9B009E76FE /* LIFEAwesomeLogger.h */,
+				BC30E8531FFEDB9B009E76FE /* LIFEAwesomeLogger.m */,
+				BC30E8541FFEDB9B009E76FE /* LIFEInputField.h */,
+				BC30E8551FFEDB9B009E76FE /* LIFEInputField.m */,
+				BC30E8561FFEDB9B009E76FE /* LIFEPickerInputField.h */,
+				BC30E8571FFEDB9B009E76FE /* LIFEPickerInputField.m */,
+				BC30E8581FFEDB9B009E76FE /* LIFETextInputField.h */,
+				BC30E8591FFEDB9B009E76FE /* LIFETextInputField.m */,
+				BC30E85A1FFEDB9B009E76FE /* Models */,
+				BC30E8751FFEDB9B009E76FE /* Protected */,
+				BC30E87A1FFEDB9B009E76FE /* Services */,
+				BC30E8AD1FFEDB9B009E76FE /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BC30E8131FFEDB9B009E76FE /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8141FFEDB9B009E76FE /* Buglife+UIStuff.h */,
+				BC30E8151FFEDB9B009E76FE /* Buglife+UIStuff.m */,
+				BC30E8161FFEDB9B009E76FE /* LIFECategories.h */,
+				BC30E8171FFEDB9B009E76FE /* LIFECategories.m */,
+				BC30E8181FFEDB9B009E76FE /* LIFECompatibilityUtils.h */,
+				BC30E8191FFEDB9B009E76FE /* LIFECompatibilityUtils.m */,
+				BC30E81A1FFEDB9B009E76FE /* LIFEGeometry.h */,
+				BC30E81B1FFEDB9B009E76FE /* LIFEGeometry.m */,
+				BC30E81C1FFEDB9B009E76FE /* LIFEMacros.h */,
+				BC30E81D1FFEDB9B009E76FE /* NSArray+LIFEAdditions.h */,
+				BC30E81E1FFEDB9B009E76FE /* NSArray+LIFEAdditions.m */,
+				BC30E81F1FFEDB9B009E76FE /* NSError+LIFEAdditions.h */,
+				BC30E8201FFEDB9B009E76FE /* NSError+LIFEAdditions.m */,
+				BC30E8211FFEDB9B009E76FE /* NSLayoutConstraint+LIFEAdditions.h */,
+				BC30E8221FFEDB9B009E76FE /* NSLayoutConstraint+LIFEAdditions.m */,
+				BC30E8231FFEDB9B009E76FE /* NSMutableDictionary+LIFEAdditions.h */,
+				BC30E8241FFEDB9B009E76FE /* NSMutableDictionary+LIFEAdditions.m */,
+				BC30E8251FFEDB9B009E76FE /* NSString+LIFEAdditions.h */,
+				BC30E8261FFEDB9B009E76FE /* NSString+LIFEAdditions.m */,
+				BC30E8271FFEDB9B009E76FE /* UIApplication+LIFEAdditions.h */,
+				BC30E8281FFEDB9B009E76FE /* UIApplication+LIFEAdditions.m */,
+				BC30E8291FFEDB9B009E76FE /* UIBezierPath+LIFEAdditions.h */,
+				BC30E82A1FFEDB9B009E76FE /* UIBezierPath+LIFEAdditions.m */,
+				BC30E82B1FFEDB9B009E76FE /* UIColor+LIFEAdditions.h */,
+				BC30E82C1FFEDB9B009E76FE /* UIColor+LIFEAdditions.m */,
+				BC30E82D1FFEDB9B009E76FE /* UIDevice+LIFEAdditions.h */,
+				BC30E82E1FFEDB9B009E76FE /* UIDevice+LIFEAdditions.m */,
+				BC30E82F1FFEDB9B009E76FE /* UIImage+LIFEAdditions.h */,
+				BC30E8301FFEDB9B009E76FE /* UIImage+LIFEAdditions.m */,
+				BC30E8311FFEDB9B009E76FE /* UITableView+LIFEAdditions.h */,
+				BC30E8321FFEDB9B009E76FE /* UITableView+LIFEAdditions.m */,
+				BC30E8331FFEDB9B009E76FE /* UITextView+LIFEAdditions.h */,
+				BC30E8341FFEDB9B009E76FE /* UITextView+LIFEAdditions.m */,
+				BC30E8351FFEDB9B009E76FE /* UIView+LIFEAdditions.h */,
+				BC30E8361FFEDB9B009E76FE /* UIView+LIFEAdditions.m */,
+				BC30E8371FFEDB9B009E76FE /* UIWindow+LIFEAdditions.h */,
+				BC30E8381FFEDB9B009E76FE /* UIWindow+LIFEAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		BC30E83D1FFEDB9B009E76FE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E83E1FFEDB9B009E76FE /* LIFEAVPlayerViewController.h */,
+				BC30E83F1FFEDB9B009E76FE /* LIFEAVPlayerViewController.m */,
+				BC30E8401FFEDB9B009E76FE /* LIFEComponentPickerViewController.h */,
+				BC30E8411FFEDB9B009E76FE /* LIFEComponentPickerViewController.m */,
+				BC30E8421FFEDB9B009E76FE /* LIFELogViewController.h */,
+				BC30E8431FFEDB9B009E76FE /* LIFELogViewController.m */,
+				BC30E8441FFEDB9B009E76FE /* LIFENavigationController.h */,
+				BC30E8451FFEDB9B009E76FE /* LIFENavigationController.m */,
+				BC30E8461FFEDB9B009E76FE /* LIFEPickerViewController.h */,
+				BC30E8471FFEDB9B009E76FE /* LIFEPickerViewController.m */,
+				BC30E8481FFEDB9B009E76FE /* LIFEReportTableViewController.h */,
+				BC30E8491FFEDB9B009E76FE /* LIFEReportTableViewController.m */,
+				BC30E84A1FFEDB9B009E76FE /* LIFEReportViewControllerDelegate.h */,
+				BC30E84B1FFEDB9B009E76FE /* LIFEScreenshotAnnotatorViewController.h */,
+				BC30E84C1FFEDB9B009E76FE /* LIFEScreenshotAnnotatorViewController.m */,
+				BC30E84D1FFEDB9B009E76FE /* LIFEStepsToReproTableViewController.h */,
+				BC30E84E1FFEDB9B009E76FE /* LIFEStepsToReproTableViewController.m */,
+				BC30E84F1FFEDB9B009E76FE /* LIFETextInputViewController.h */,
+				BC30E8501FFEDB9B009E76FE /* LIFETextInputViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC30E85A1FFEDB9B009E76FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E85B1FFEDB9B009E76FE /* LIFEAnnotatedImage.h */,
+				BC30E85C1FFEDB9B009E76FE /* LIFEAnnotatedImage.m */,
+				BC30E85D1FFEDB9B009E76FE /* LIFEAnnotation.h */,
+				BC30E85E1FFEDB9B009E76FE /* LIFEAnnotation.m */,
+				BC30E85F1FFEDB9B009E76FE /* LIFEAppInfo.h */,
+				BC30E8601FFEDB9B009E76FE /* LIFEAppInfo.m */,
+				BC30E8611FFEDB9B009E76FE /* LIFEAttribute.h */,
+				BC30E8621FFEDB9B009E76FE /* LIFEAttribute.m */,
+				BC30E8631FFEDB9B009E76FE /* LIFEDeviceBatteryState.h */,
+				BC30E8641FFEDB9B009E76FE /* LIFEDeviceInfo.h */,
+				BC30E8651FFEDB9B009E76FE /* LIFEDeviceInfo.m */,
+				BC30E8661FFEDB9B009E76FE /* LIFEImageFormat.h */,
+				BC30E8671FFEDB9B009E76FE /* LIFEImageFormat.m */,
+				BC30E8681FFEDB9B009E76FE /* LIFEReport.h */,
+				BC30E8691FFEDB9B009E76FE /* LIFEReport.m */,
+				BC30E86A1FFEDB9B009E76FE /* LIFEReportAttachmentImpl.h */,
+				BC30E86B1FFEDB9B009E76FE /* LIFEReportAttachmentImpl.m */,
+				BC30E86C1FFEDB9B009E76FE /* LIFEReportOwner.h */,
+				BC30E86D1FFEDB9B009E76FE /* LIFEReportOwner.m */,
+				BC30E86E1FFEDB9B009E76FE /* LIFEReproStep.h */,
+				BC30E86F1FFEDB9B009E76FE /* LIFEReproStep.m */,
+				BC30E8701FFEDB9B009E76FE /* LIFEScreenshotContext.h */,
+				BC30E8711FFEDB9B009E76FE /* LIFEScreenshotContext.m */,
+				BC30E8721FFEDB9B009E76FE /* LIFEUserFacingAttachment.h */,
+				BC30E8731FFEDB9B009E76FE /* LIFEVideoAttachment.h */,
+				BC30E8741FFEDB9B009E76FE /* LIFEVideoAttachment.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC30E8751FFEDB9B009E76FE /* Protected */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8761FFEDB9B009E76FE /* Buglife+Protected.h */,
+				BC30E8771FFEDB9B009E76FE /* LIFEAwesomeLogger+Protected.h */,
+				BC30E8781FFEDB9B009E76FE /* LIFEInputField+Protected.h */,
+				BC30E8791FFEDB9B009E76FE /* LIFEPickerInputField+Protected.h */,
+			);
+			path = Protected;
+			sourceTree = "<group>";
+		};
+		BC30E87A1FFEDB9B009E76FE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E87B1FFEDB9B009E76FE /* LIFEAppInfoProvider.h */,
+				BC30E87C1FFEDB9B009E76FE /* LIFEAppInfoProvider.m */,
+				BC30E87D1FFEDB9B009E76FE /* LIFEAttachmentManager.h */,
+				BC30E87E1FFEDB9B009E76FE /* LIFEAttachmentManager.m */,
+				BC30E87F1FFEDB9B009E76FE /* LIFEAVFoundation.h */,
+				BC30E8801FFEDB9B009E76FE /* LIFEAVFoundation.m */,
+				BC30E8811FFEDB9B009E76FE /* LIFEDataProvider.h */,
+				BC30E8821FFEDB9B009E76FE /* LIFEDataProvider.m */,
+				BC30E8831FFEDB9B009E76FE /* LIFEDependencyLoader.h */,
+				BC30E8841FFEDB9B009E76FE /* LIFEDependencyLoader.m */,
+				BC30E8851FFEDB9B009E76FE /* LIFEDeviceInfoProvider.h */,
+				BC30E8861FFEDB9B009E76FE /* LIFEDeviceInfoProvider.m */,
+				BC30E8871FFEDB9B009E76FE /* LIFEImagePickerController.h */,
+				BC30E8881FFEDB9B009E76FE /* LIFEImagePickerController.m */,
+				BC30E8891FFEDB9B009E76FE /* LIFEImageProcessor.h */,
+				BC30E88A1FFEDB9B009E76FE /* LIFEImageProcessor.m */,
+				BC30E88B1FFEDB9B009E76FE /* LIFELogFacility.h */,
+				BC30E88C1FFEDB9B009E76FE /* LIFELogFacility.m */,
+				BC30E88D1FFEDB9B009E76FE /* LIFENetworkManager.h */,
+				BC30E88E1FFEDB9B009E76FE /* LIFENetworkManager.m */,
+				BC30E88F1FFEDB9B009E76FE /* LIFEReachability.h */,
+				BC30E8901FFEDB9B009E76FE /* LIFEReachability.m */,
+				BC30E8911FFEDB9B009E76FE /* LIFERecordingShrinker.h */,
+				BC30E8921FFEDB9B009E76FE /* LIFERecordingShrinker.m */,
+				BC30E8931FFEDB9B009E76FE /* LIFEReportBuilder.h */,
+				BC30E8941FFEDB9B009E76FE /* LIFEReportBuilder.m */,
+				BC30E8951FFEDB9B009E76FE /* LIFESwizzler.h */,
+				BC30E8961FFEDB9B009E76FE /* LIFESwizzler.m */,
+				BC30E8971FFEDB9B009E76FE /* LIFETelephonyNetworkInfo.h */,
+				BC30E8981FFEDB9B009E76FE /* LIFETelephonyNetworkInfo.m */,
+				BC30E8991FFEDB9B009E76FE /* LIFEUserDefaults.h */,
+				BC30E89A1FFEDB9B009E76FE /* LIFEUserDefaults.m */,
+				BC30E89B1FFEDB9B009E76FE /* Logging */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BC30E89B1FFEDB9B009E76FE /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E89C1FFEDB9B009E76FE /* LIFEASLLogger.h */,
+				BC30E89D1FFEDB9B009E76FE /* LIFEASLLogger.m */,
+				BC30E89E1FFEDB9B009E76FE /* LIFEContextAwareLogFormatter.h */,
+				BC30E89F1FFEDB9B009E76FE /* LIFEContextAwareLogFormatter.m */,
+				BC30E8A01FFEDB9B009E76FE /* LIFEFileLogger.h */,
+				BC30E8A11FFEDB9B009E76FE /* LIFEFileLogger.m */,
+				BC30E8A21FFEDB9B009E76FE /* LIFEJSONLogFileFormatter.h */,
+				BC30E8A31FFEDB9B009E76FE /* LIFEJSONLogFileFormatter.m */,
+				BC30E8A41FFEDB9B009E76FE /* LIFELog.h */,
+				BC30E8A51FFEDB9B009E76FE /* LIFELog.m */,
+				BC30E8A61FFEDB9B009E76FE /* LIFELogger.h */,
+				BC30E8A71FFEDB9B009E76FE /* LIFELogger.m */,
+				BC30E8A81FFEDB9B009E76FE /* LIFELogMacros.h */,
+				BC30E8A91FFEDB9B009E76FE /* LIFENotificationLogger.h */,
+				BC30E8AA1FFEDB9B009E76FE /* LIFENotificationLogger.m */,
+				BC30E8AB1FFEDB9B009E76FE /* LIFETTYLogger.h */,
+				BC30E8AC1FFEDB9B009E76FE /* LIFETTYLogger.m */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		BC30E8AD1FFEDB9B009E76FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8AE1FFEDB9B009E76FE /* AnnotationViews */,
+				BC30E8B71FFEDB9B009E76FE /* GestureRecognizers */,
+				BC30E8BC1FFEDB9B009E76FE /* LIFEAnnotatedImageView.h */,
+				BC30E8BD1FFEDB9B009E76FE /* LIFEAnnotatedImageView.m */,
+				BC30E8BE1FFEDB9B009E76FE /* LIFEAppearanceImpl.h */,
+				BC30E8BF1FFEDB9B009E76FE /* LIFEAppearanceImpl.m */,
+				BC30E8C01FFEDB9B009E76FE /* LIFEAttachmentView.h */,
+				BC30E8C11FFEDB9B009E76FE /* LIFEAttachmentView.m */,
+				BC30E8C21FFEDB9B009E76FE /* LIFEBugButtonWindow.h */,
+				BC30E8C31FFEDB9B009E76FE /* LIFEBugButtonWindow.m */,
+				BC30E8C41FFEDB9B009E76FE /* LIFEComponentPickerCell.h */,
+				BC30E8C51FFEDB9B009E76FE /* LIFEComponentPickerCell.m */,
+				BC30E8C61FFEDB9B009E76FE /* LIFEFloatingButton.h */,
+				BC30E8C71FFEDB9B009E76FE /* LIFEFloatingButton.m */,
+				BC30E8C81FFEDB9B009E76FE /* LIFELocalizedStringProvider.h */,
+				BC30E8C91FFEDB9B009E76FE /* LIFELocalizedStringProvider.m */,
+				BC30E8CA1FFEDB9B009E76FE /* LIFEMenuPopoverView.h */,
+				BC30E8CB1FFEDB9B009E76FE /* LIFEMenuPopoverView.m */,
+				BC30E8CC1FFEDB9B009E76FE /* LIFEOverlayWindow.h */,
+				BC30E8CD1FFEDB9B009E76FE /* LIFEOverlayWindow.m */,
+				BC30E8CE1FFEDB9B009E76FE /* LIFEPoweredByBuglifeView.h */,
+				BC30E8CF1FFEDB9B009E76FE /* LIFEPoweredByBuglifeView.m */,
+				BC30E8D01FFEDB9B009E76FE /* LIFEReportView.h */,
+				BC30E8D11FFEDB9B009E76FE /* LIFEReportView.m */,
+				BC30E8D21FFEDB9B009E76FE /* LIFEReportWindow.h */,
+				BC30E8D31FFEDB9B009E76FE /* LIFEReportWindow.m */,
+				BC30E8D41FFEDB9B009E76FE /* LIFEScreenshotAnnotatorView.h */,
+				BC30E8D51FFEDB9B009E76FE /* LIFEScreenshotAnnotatorView.m */,
+				BC30E8D61FFEDB9B009E76FE /* LIFEStepsToReproduceCell.h */,
+				BC30E8D71FFEDB9B009E76FE /* LIFEStepsToReproduceCell.m */,
+				BC30E8D81FFEDB9B009E76FE /* LIFETextFieldCell.h */,
+				BC30E8D91FFEDB9B009E76FE /* LIFETextFieldCell.m */,
+				BC30E8DA1FFEDB9B009E76FE /* LIFETitleCell.h */,
+				BC30E8DB1FFEDB9B009E76FE /* LIFETitleCell.m */,
+				BC30E8DC1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.h */,
+				BC30E8DD1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BC30E8AE1FFEDB9B009E76FE /* AnnotationViews */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8AF1FFEDB9B009E76FE /* LIFEAnnotationView.h */,
+				BC30E8B01FFEDB9B009E76FE /* LIFEAnnotationView.m */,
+				BC30E8B11FFEDB9B009E76FE /* LIFEArrowAnnotationView.h */,
+				BC30E8B21FFEDB9B009E76FE /* LIFEArrowAnnotationView.m */,
+				BC30E8B31FFEDB9B009E76FE /* LIFEBlurAnnotationView.h */,
+				BC30E8B41FFEDB9B009E76FE /* LIFEBlurAnnotationView.m */,
+				BC30E8B51FFEDB9B009E76FE /* LIFELoupeAnnotationView.h */,
+				BC30E8B61FFEDB9B009E76FE /* LIFELoupeAnnotationView.m */,
+			);
+			path = AnnotationViews;
+			sourceTree = "<group>";
+		};
+		BC30E8B71FFEDB9B009E76FE /* GestureRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8B81FFEDB9B009E76FE /* LIFEContinuousForceTouchGestureRecognizer.h */,
+				BC30E8B91FFEDB9B009E76FE /* LIFEContinuousForceTouchGestureRecognizer.m */,
+				BC30E8BA1FFEDB9B009E76FE /* LIFEPanGestureRecognizer.h */,
+				BC30E8BB1FFEDB9B009E76FE /* LIFEPanGestureRecognizer.m */,
+			);
+			path = GestureRecognizers;
+			sourceTree = "<group>";
+		};
+		BC30E8DE1FFEDB9B009E76FE /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				BC30E8DF1FFEDB9B009E76FE /* AwesomeLogger.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,10 +872,25 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BC30E7F11FFEDB9A009E76FE /* Products */;
+					ProjectRef = BC30E7F01FFEDB9A009E76FE /* Buglife Example.xcodeproj */;
+				},
+				{
+					ProductGroup = BC30E7E31FFEDB9A009E76FE /* Products */;
+					ProjectRef = BC30E7E21FFEDB9A009E76FE /* Buglife.xcodeproj */;
+				},
+				{
+					ProductGroup = BC30E7FB1FFEDB9B009E76FE /* Products */;
+					ProjectRef = BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RNBuglife */,
@@ -107,16 +898,164 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		BC30E8E21FFEDB9B009E76FE /* Buglife Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Buglife Example.app";
+			remoteRef = BC30E8E11FFEDB9B009E76FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC30E8E51FFEDB9B009E76FE /* Buglife.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Buglife.framework;
+			remoteRef = BC30E8E41FFEDB9B009E76FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC30E8E91FFEDB9B009E76FE /* Buglife.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Buglife.framework;
+			remoteRef = BC30E8E81FFEDB9B009E76FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC30E8EB1FFEDB9B009E76FE /* Pods_Buglife_Example.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Buglife_Example.framework;
+			remoteRef = BC30E8EA1FFEDB9B009E76FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC30E8F71FFEDB9B009E76FE /* NSLayoutConstraint+LIFEAdditions.m in Sources */,
+				BC30E9151FFEDB9B009E76FE /* LIFEAttribute.m in Sources */,
+				BC30E9071FFEDB9B009E76FE /* LIFELogViewController.m in Sources */,
+				BC30E93B1FFEDB9B009E76FE /* LIFEPanGestureRecognizer.m in Sources */,
+				BC30E91A1FFEDB9B009E76FE /* LIFEReportOwner.m in Sources */,
+				BC30E8F31FFEDB9B009E76FE /* LIFECompatibilityUtils.m in Sources */,
+				BC30E9241FFEDB9B009E76FE /* LIFEImagePickerController.m in Sources */,
+				BC30E93A1FFEDB9B009E76FE /* LIFEContinuousForceTouchGestureRecognizer.m in Sources */,
+				BC30E92E1FFEDB9B009E76FE /* LIFEASLLogger.m in Sources */,
+				BC30E8EF1FFEDB9B009E76FE /* Buglife-dummy.m in Sources */,
+				BC30E9261FFEDB9B009E76FE /* LIFELogFacility.m in Sources */,
+				BC30E90B1FFEDB9B009E76FE /* LIFEScreenshotAnnotatorViewController.m in Sources */,
+				BC30E8F51FFEDB9B009E76FE /* NSArray+LIFEAdditions.m in Sources */,
+				BC30E8FA1FFEDB9B009E76FE /* UIApplication+LIFEAdditions.m in Sources */,
+				BC30E9001FFEDB9B009E76FE /* UITextView+LIFEAdditions.m in Sources */,
+				BC30E9211FFEDB9B009E76FE /* LIFEDataProvider.m in Sources */,
+				BC30E9091FFEDB9B009E76FE /* LIFEPickerViewController.m in Sources */,
+				BC30E8FE1FFEDB9B009E76FE /* UIImage+LIFEAdditions.m in Sources */,
+				BC30E9271FFEDB9B009E76FE /* LIFENetworkManager.m in Sources */,
+				BC30E9181FFEDB9B009E76FE /* LIFEReport.m in Sources */,
+				BC30E92A1FFEDB9B009E76FE /* LIFEReportBuilder.m in Sources */,
+				BC30E91C1FFEDB9B009E76FE /* LIFEScreenshotContext.m in Sources */,
+				BC30E9381FFEDB9B009E76FE /* LIFEBlurAnnotationView.m in Sources */,
+				BC30E9451FFEDB9B009E76FE /* LIFEPoweredByBuglifeView.m in Sources */,
+				BC30E92D1FFEDB9B009E76FE /* LIFEUserDefaults.m in Sources */,
+				BC30E8F21FFEDB9B009E76FE /* LIFECategories.m in Sources */,
+				BC30E91F1FFEDB9B009E76FE /* LIFEAttachmentManager.m in Sources */,
+				BC30E90E1FFEDB9B009E76FE /* LIFEAwesomeLogger.m in Sources */,
+				BC30E91E1FFEDB9B009E76FE /* LIFEAppInfoProvider.m in Sources */,
+				BC30E9051FFEDB9B009E76FE /* LIFEAVPlayerViewController.m in Sources */,
+				BC30E8F01FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m in Sources */,
+				BC30E9481FFEDB9B009E76FE /* LIFEScreenshotAnnotatorView.m in Sources */,
+				BC30E9111FFEDB9B009E76FE /* LIFETextInputField.m in Sources */,
+				BC30E8ED1FFEDB9B009E76FE /* AwesomeLabel.swift in Sources */,
+				BC30E9221FFEDB9B009E76FE /* LIFEDependencyLoader.m in Sources */,
+				BC30E9351FFEDB9B009E76FE /* LIFETTYLogger.m in Sources */,
+				BC30E9311FFEDB9B009E76FE /* LIFEJSONLogFileFormatter.m in Sources */,
+				BC30E8EC1FFEDB9B009E76FE /* AppDelegate.swift in Sources */,
+				BC30E8F91FFEDB9B009E76FE /* NSString+LIFEAdditions.m in Sources */,
+				BC30E9491FFEDB9B009E76FE /* LIFEStepsToReproduceCell.m in Sources */,
+				BC30E9371FFEDB9B009E76FE /* LIFEArrowAnnotationView.m in Sources */,
+				BC30E9011FFEDB9B009E76FE /* UIView+LIFEAdditions.m in Sources */,
+				BC30E9291FFEDB9B009E76FE /* LIFERecordingShrinker.m in Sources */,
+				BC30E9431FFEDB9B009E76FE /* LIFEMenuPopoverView.m in Sources */,
+				BC30E93D1FFEDB9B009E76FE /* LIFEAppearanceImpl.m in Sources */,
+				BC30E9201FFEDB9B009E76FE /* LIFEAVFoundation.m in Sources */,
+				BC30E9301FFEDB9B009E76FE /* LIFEFileLogger.m in Sources */,
+				BC30E93E1FFEDB9B009E76FE /* LIFEAttachmentView.m in Sources */,
+				BC30E9251FFEDB9B009E76FE /* LIFEImageProcessor.m in Sources */,
+				BC30E92F1FFEDB9B009E76FE /* LIFEContextAwareLogFormatter.m in Sources */,
+				BC30E8F61FFEDB9B009E76FE /* NSError+LIFEAdditions.m in Sources */,
+				BC30E92C1FFEDB9B009E76FE /* LIFETelephonyNetworkInfo.m in Sources */,
+				BC30E94C1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.m in Sources */,
+				BC30E8FC1FFEDB9B009E76FE /* UIColor+LIFEAdditions.m in Sources */,
+				BC30E90F1FFEDB9B009E76FE /* LIFEInputField.m in Sources */,
+				BC30E94B1FFEDB9B009E76FE /* LIFETitleCell.m in Sources */,
+				BC30E8FB1FFEDB9B009E76FE /* UIBezierPath+LIFEAdditions.m in Sources */,
+				BC30E9031FFEDB9B009E76FE /* Buglife+LocalizedStrings.m in Sources */,
+				BC30E9171FFEDB9B009E76FE /* LIFEImageFormat.m in Sources */,
+				BC30E9411FFEDB9B009E76FE /* LIFEFloatingButton.m in Sources */,
+				BC30E93C1FFEDB9B009E76FE /* LIFEAnnotatedImageView.m in Sources */,
+				BC30E91D1FFEDB9B009E76FE /* LIFEVideoAttachment.m in Sources */,
+				BC30E9121FFEDB9B009E76FE /* LIFEAnnotatedImage.m in Sources */,
+				BC30E9341FFEDB9B009E76FE /* LIFENotificationLogger.m in Sources */,
+				BC30E9061FFEDB9B009E76FE /* LIFEComponentPickerViewController.m in Sources */,
+				BC30E9161FFEDB9B009E76FE /* LIFEDeviceInfo.m in Sources */,
+				BC30E8EE1FFEDB9B009E76FE /* ViewController.swift in Sources */,
+				BC30E9101FFEDB9B009E76FE /* LIFEPickerInputField.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNBuglife.m in Sources */,
+				BC30E9441FFEDB9B009E76FE /* LIFEOverlayWindow.m in Sources */,
+				BC30E8F11FFEDB9B009E76FE /* Buglife+UIStuff.m in Sources */,
+				BC30E9081FFEDB9B009E76FE /* LIFENavigationController.m in Sources */,
+				BC30E94D1FFEDB9B009E76FE /* AwesomeLogger.swift in Sources */,
+				BC30E9191FFEDB9B009E76FE /* LIFEReportAttachmentImpl.m in Sources */,
+				BC30E9401FFEDB9B009E76FE /* LIFEComponentPickerCell.m in Sources */,
+				BC30E9461FFEDB9B009E76FE /* LIFEReportView.m in Sources */,
+				BC30E9391FFEDB9B009E76FE /* LIFELoupeAnnotationView.m in Sources */,
+				BC30E9281FFEDB9B009E76FE /* LIFEReachability.m in Sources */,
+				BC30E9041FFEDB9B009E76FE /* Buglife.m in Sources */,
+				BC30E9131FFEDB9B009E76FE /* LIFEAnnotation.m in Sources */,
+				BC30E9021FFEDB9B009E76FE /* UIWindow+LIFEAdditions.m in Sources */,
+				BC30E91B1FFEDB9B009E76FE /* LIFEReproStep.m in Sources */,
+				BC30E9471FFEDB9B009E76FE /* LIFEReportWindow.m in Sources */,
+				BC30E9421FFEDB9B009E76FE /* LIFELocalizedStringProvider.m in Sources */,
+				BC30E92B1FFEDB9B009E76FE /* LIFESwizzler.m in Sources */,
+				BC30E8F41FFEDB9B009E76FE /* LIFEGeometry.m in Sources */,
+				BC30E9361FFEDB9B009E76FE /* LIFEAnnotationView.m in Sources */,
+				BC30E9331FFEDB9B009E76FE /* LIFELogger.m in Sources */,
+				BC30E8FF1FFEDB9B009E76FE /* UITableView+LIFEAdditions.m in Sources */,
+				BC30E90A1FFEDB9B009E76FE /* LIFEReportTableViewController.m in Sources */,
+				BC30E94A1FFEDB9B009E76FE /* LIFETextFieldCell.m in Sources */,
+				BC30E9141FFEDB9B009E76FE /* LIFEAppInfo.m in Sources */,
+				BC30E90D1FFEDB9B009E76FE /* LIFETextInputViewController.m in Sources */,
+				BC30E8FD1FFEDB9B009E76FE /* UIDevice+LIFEAdditions.m in Sources */,
+				BC30E8F81FFEDB9B009E76FE /* NSMutableDictionary+LIFEAdditions.m in Sources */,
+				BC30E9231FFEDB9B009E76FE /* LIFEDeviceInfoProvider.m in Sources */,
+				BC30E93F1FFEDB9B009E76FE /* LIFEBugButtonWindow.m in Sources */,
+				BC30E9321FFEDB9B009E76FE /* LIFELog.m in Sources */,
+				BC30E90C1FFEDB9B009E76FE /* LIFEStepsToReproTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC30E7EA1FFEDB9A009E76FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC30E7EB1FFEDB9A009E76FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BC30E7EC1FFEDB9A009E76FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC30E7ED1FFEDB9A009E76FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		58B511ED1A9E6C8500147676 /* Debug */ = {
@@ -204,7 +1143,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",

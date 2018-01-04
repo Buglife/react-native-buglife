@@ -10,9 +10,6 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) a
 
 3. `react-native link` to link the native libraries to the react wrappers.
 
-3. In the Xcode project navigator, right-click the **Libraries** group and select **Add Files to [your project]**.
-4. Go to `node_modules` ➡ `react-native-buglife`, and add `RNBuglife.xcodeproj`
-5. Open your Xcode project's **Build Phases** tab, and expand the **Link Binary With Libraries** panel. Add `libRNBuglife.a`
 
 # Usage
 
@@ -21,6 +18,7 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) a
     ```javascript
     var Buglife = require('react-native-buglife');
     ```
+    
 2. If you have already created a Buglife account, initialize the SDK using your organization's API key:
 	
 	```javascript
@@ -31,6 +29,7 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) a
 	```javascript
 	Buglife.startWithEmail("you@yourdomain.com");
 	```
+	For React Native on Android, if you want to use the screenshot invocation, you'll need to put a call to one of these APIs in your Application subclass's `onCreate()` method. 
 	
 3. By default, the Buglife bug reporter is invoked using the shake gesture. However with React Native, shake is also used to present the [developer menu](https://facebook.github.io/react-native/docs/debugging.html).
 
@@ -43,6 +42,14 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) a
 	// Floating bug button
 	Buglife.setInvocationOptions(Buglife.invocationOptionsFloatingButton);
 	```
+4. You may want to add the reporter's email address or other account identifier to your bug reports. You can do this with 
+	```javascript
+	// Set an email address
+	Buglife.setUserEmail("name@example.com")
+	// Set a user identifier
+	Buglife.setUserIdentifier("account name")
+	```
+	
 
 ### Attachments
 
