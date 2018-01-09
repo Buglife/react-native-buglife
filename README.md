@@ -6,9 +6,7 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) a
 # Installation
 
 1. `npm install react-native-buglife --save`
-2. Install Buglife iOS via either CocoaPods or manually ([more info here](https://github.com/Buglife/Buglife-iOS)), and/or add `compile "com.buglife.sdk:buglife-android:1.2.2"` to your build.gradle.
-
-3. `react-native link` to link the native libraries to the react wrappers.
+2. `react-native link` to link the native libraries to the react wrappers.
 
 
 # Usage
