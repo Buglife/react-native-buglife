@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNBuglife.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNBuglife.m */; };
-		BC30E8EC1FFEDB9B009E76FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30E7E71FFEDB9A009E76FE /* AppDelegate.swift */; };
-		BC30E8ED1FFEDB9B009E76FE /* AwesomeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30E7E91FFEDB9A009E76FE /* AwesomeLabel.swift */; };
-		BC30E8EE1FFEDB9B009E76FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30E7EF1FFEDB9A009E76FE /* ViewController.swift */; };
-		BC30E8EF1FFEDB9B009E76FE /* Buglife-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E7FF1FFEDB9B009E76FE /* Buglife-dummy.m */; };
-		BC30E8F01FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8091FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m */; };
 		BC30E8F11FFEDB9B009E76FE /* Buglife+UIStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8151FFEDB9B009E76FE /* Buglife+UIStuff.m */; };
 		BC30E8F21FFEDB9B009E76FE /* LIFECategories.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8171FFEDB9B009E76FE /* LIFECategories.m */; };
 		BC30E8F31FFEDB9B009E76FE /* LIFECompatibilityUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8191FFEDB9B009E76FE /* LIFECompatibilityUtils.m */; };
@@ -105,37 +100,15 @@
 		BC30E94A1FFEDB9B009E76FE /* LIFETextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8D91FFEDB9B009E76FE /* LIFETextFieldCell.m */; };
 		BC30E94B1FFEDB9B009E76FE /* LIFETitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8DB1FFEDB9B009E76FE /* LIFETitleCell.m */; };
 		BC30E94C1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8DD1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.m */; };
-		BC30E94D1FFEDB9B009E76FE /* AwesomeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30E8DF1FFEDB9B009E76FE /* AwesomeLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BC30E8E11FFEDB9B009E76FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BC30E7F01FFEDB9A009E76FE /* Buglife Example.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCB796611FC62EF300305EF7;
-			remoteInfo = "Buglife Example";
-		};
 		BC30E8E41FFEDB9B009E76FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC30E7E21FFEDB9A009E76FE /* Buglife.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B7EAF7181FC8DAB000196024;
 			remoteInfo = Buglife;
-		};
-		BC30E8E81FFEDB9B009E76FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BECF8ED1D0C9F8D6879D0D8A3124102;
-			remoteInfo = Buglife;
-		};
-		BC30E8EA1FFEDB9B009E76FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A0C960EA9ED1092AC0F8C74F4F80B1C6;
-			remoteInfo = "Pods-Buglife Example";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -157,38 +130,7 @@
 		B3E7B5891CC2AC0600A0062D /* RNBuglife.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBuglife.m; sourceTree = "<group>"; };
 		BC30E7DE1FFEDB9A009E76FE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BC30E7E01FFEDB9A009E76FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC30E7E11FFEDB9A009E76FE /* Buglife.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Buglife.podspec; sourceTree = "<group>"; };
 		BC30E7E21FFEDB9A009E76FE /* Buglife.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Buglife.xcodeproj; sourceTree = "<group>"; };
-		BC30E7E71FFEDB9A009E76FE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC30E7E81FFEDB9A009E76FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BC30E7E91FFEDB9A009E76FE /* AwesomeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeLabel.swift; sourceTree = "<group>"; };
-		BC30E7EB1FFEDB9A009E76FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BC30E7ED1FFEDB9A009E76FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BC30E7EE1FFEDB9A009E76FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC30E7EF1FFEDB9A009E76FE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC30E7F01FFEDB9A009E76FE /* Buglife Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Buglife Example.xcodeproj"; sourceTree = "<group>"; };
-		BC30E7F31FFEDB9B009E76FE /* Buglife Example.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = "Buglife Example.xcworkspace"; sourceTree = "<group>"; };
-		BC30E7F41FFEDB9B009E76FE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		BC30E7F51FFEDB9B009E76FE /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
-		BC30E7F81FFEDB9B009E76FE /* Buglife.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Buglife.podspec.json; sourceTree = "<group>"; };
-		BC30E7F91FFEDB9B009E76FE /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
-		BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
-		BC30E7FF1FFEDB9B009E76FE /* Buglife-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Buglife-dummy.m"; sourceTree = "<group>"; };
-		BC30E8001FFEDB9B009E76FE /* Buglife-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buglife-prefix.pch"; sourceTree = "<group>"; };
-		BC30E8011FFEDB9B009E76FE /* Buglife-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buglife-umbrella.h"; sourceTree = "<group>"; };
-		BC30E8021FFEDB9B009E76FE /* Buglife.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Buglife.modulemap; sourceTree = "<group>"; };
-		BC30E8031FFEDB9B009E76FE /* Buglife.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Buglife.xcconfig; sourceTree = "<group>"; };
-		BC30E8041FFEDB9B009E76FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC30E8061FFEDB9B009E76FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC30E8071FFEDB9B009E76FE /* Pods-Buglife Example-acknowledgements.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Pods-Buglife Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BC30E8081FFEDB9B009E76FE /* Pods-Buglife Example-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-Buglife Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		BC30E8091FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pods-Buglife Example-dummy.m"; sourceTree = "<group>"; };
-		BC30E80A1FFEDB9B009E76FE /* Pods-Buglife Example-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-Buglife Example-frameworks.sh"; sourceTree = "<group>"; };
-		BC30E80B1FFEDB9B009E76FE /* Pods-Buglife Example-resources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-Buglife Example-resources.sh"; sourceTree = "<group>"; };
-		BC30E80C1FFEDB9B009E76FE /* Pods-Buglife Example-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-Buglife Example-umbrella.h"; sourceTree = "<group>"; };
-		BC30E80D1FFEDB9B009E76FE /* Pods-Buglife Example.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-Buglife Example.debug.xcconfig"; sourceTree = "<group>"; };
-		BC30E80E1FFEDB9B009E76FE /* Pods-Buglife Example.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Buglife Example.modulemap"; sourceTree = "<group>"; };
-		BC30E80F1FFEDB9B009E76FE /* Pods-Buglife Example.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-Buglife Example.release.xcconfig"; sourceTree = "<group>"; };
 		BC30E8101FFEDB9B009E76FE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BC30E8111FFEDB9B009E76FE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BC30E8141FFEDB9B009E76FE /* Buglife+UIStuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buglife+UIStuff.h"; sourceTree = "<group>"; };
@@ -385,7 +327,6 @@
 		BC30E8DB1FFEDB9B009E76FE /* LIFETitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFETitleCell.m; sourceTree = "<group>"; };
 		BC30E8DC1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFEWhatHappenedTextView.h; sourceTree = "<group>"; };
 		BC30E8DD1FFEDB9B009E76FE /* LIFEWhatHappenedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFEWhatHappenedTextView.m; sourceTree = "<group>"; };
-		BC30E8DF1FFEDB9B009E76FE /* AwesomeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,13 +363,10 @@
 			children = (
 				BC30E7DE1FFEDB9A009E76FE /* .gitignore */,
 				BC30E7DF1FFEDB9A009E76FE /* Buglife */,
-				BC30E7E11FFEDB9A009E76FE /* Buglife.podspec */,
 				BC30E7E21FFEDB9A009E76FE /* Buglife.xcodeproj */,
-				BC30E7E51FFEDB9A009E76FE /* Example */,
 				BC30E8101FFEDB9B009E76FE /* LICENSE */,
 				BC30E8111FFEDB9B009E76FE /* README.md */,
 				BC30E8121FFEDB9B009E76FE /* Source */,
-				BC30E8DE1FFEDB9B009E76FE /* Swift */,
 			);
 			path = "Buglife-iOS";
 			sourceTree = "<group>";
@@ -447,108 +385,6 @@
 				BC30E8E51FFEDB9B009E76FE /* Buglife.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BC30E7E51FFEDB9A009E76FE /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E7E61FFEDB9A009E76FE /* Buglife Example */,
-				BC30E7F01FFEDB9A009E76FE /* Buglife Example.xcodeproj */,
-				BC30E7F31FFEDB9B009E76FE /* Buglife Example.xcworkspace */,
-				BC30E7F41FFEDB9B009E76FE /* Podfile */,
-				BC30E7F51FFEDB9B009E76FE /* Podfile.lock */,
-				BC30E7F61FFEDB9B009E76FE /* Pods */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		BC30E7E61FFEDB9A009E76FE /* Buglife Example */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E7E71FFEDB9A009E76FE /* AppDelegate.swift */,
-				BC30E7E81FFEDB9A009E76FE /* Assets.xcassets */,
-				BC30E7E91FFEDB9A009E76FE /* AwesomeLabel.swift */,
-				BC30E7EA1FFEDB9A009E76FE /* LaunchScreen.storyboard */,
-				BC30E7EC1FFEDB9A009E76FE /* Main.storyboard */,
-				BC30E7EE1FFEDB9A009E76FE /* Info.plist */,
-				BC30E7EF1FFEDB9A009E76FE /* ViewController.swift */,
-			);
-			path = "Buglife Example";
-			sourceTree = "<group>";
-		};
-		BC30E7F11FFEDB9A009E76FE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E8E21FFEDB9B009E76FE /* Buglife Example.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BC30E7F61FFEDB9B009E76FE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E7F71FFEDB9B009E76FE /* Local Podspecs */,
-				BC30E7F91FFEDB9B009E76FE /* Manifest.lock */,
-				BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */,
-				BC30E7FD1FFEDB9B009E76FE /* Target Support Files */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		BC30E7F71FFEDB9B009E76FE /* Local Podspecs */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E7F81FFEDB9B009E76FE /* Buglife.podspec.json */,
-			);
-			path = "Local Podspecs";
-			sourceTree = "<group>";
-		};
-		BC30E7FB1FFEDB9B009E76FE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E8E91FFEDB9B009E76FE /* Buglife.framework */,
-				BC30E8EB1FFEDB9B009E76FE /* Pods_Buglife_Example.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BC30E7FD1FFEDB9B009E76FE /* Target Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E7FE1FFEDB9B009E76FE /* Buglife */,
-				BC30E8051FFEDB9B009E76FE /* Pods-Buglife Example */,
-			);
-			path = "Target Support Files";
-			sourceTree = "<group>";
-		};
-		BC30E7FE1FFEDB9B009E76FE /* Buglife */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E7FF1FFEDB9B009E76FE /* Buglife-dummy.m */,
-				BC30E8001FFEDB9B009E76FE /* Buglife-prefix.pch */,
-				BC30E8011FFEDB9B009E76FE /* Buglife-umbrella.h */,
-				BC30E8021FFEDB9B009E76FE /* Buglife.modulemap */,
-				BC30E8031FFEDB9B009E76FE /* Buglife.xcconfig */,
-				BC30E8041FFEDB9B009E76FE /* Info.plist */,
-			);
-			path = Buglife;
-			sourceTree = "<group>";
-		};
-		BC30E8051FFEDB9B009E76FE /* Pods-Buglife Example */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E8061FFEDB9B009E76FE /* Info.plist */,
-				BC30E8071FFEDB9B009E76FE /* Pods-Buglife Example-acknowledgements.markdown */,
-				BC30E8081FFEDB9B009E76FE /* Pods-Buglife Example-acknowledgements.plist */,
-				BC30E8091FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m */,
-				BC30E80A1FFEDB9B009E76FE /* Pods-Buglife Example-frameworks.sh */,
-				BC30E80B1FFEDB9B009E76FE /* Pods-Buglife Example-resources.sh */,
-				BC30E80C1FFEDB9B009E76FE /* Pods-Buglife Example-umbrella.h */,
-				BC30E80D1FFEDB9B009E76FE /* Pods-Buglife Example.debug.xcconfig */,
-				BC30E80E1FFEDB9B009E76FE /* Pods-Buglife Example.modulemap */,
-				BC30E80F1FFEDB9B009E76FE /* Pods-Buglife Example.release.xcconfig */,
-			);
-			path = "Pods-Buglife Example";
 			sourceTree = "<group>";
 		};
 		BC30E8121FFEDB9B009E76FE /* Source */ = {
@@ -824,14 +660,6 @@
 			path = GestureRecognizers;
 			sourceTree = "<group>";
 		};
-		BC30E8DE1FFEDB9B009E76FE /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				BC30E8DF1FFEDB9B009E76FE /* AwesomeLogger.swift */,
-			);
-			path = Swift;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -879,16 +707,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BC30E7F11FFEDB9A009E76FE /* Products */;
-					ProjectRef = BC30E7F01FFEDB9A009E76FE /* Buglife Example.xcodeproj */;
-				},
-				{
 					ProductGroup = BC30E7E31FFEDB9A009E76FE /* Products */;
 					ProjectRef = BC30E7E21FFEDB9A009E76FE /* Buglife.xcodeproj */;
-				},
-				{
-					ProductGroup = BC30E7FB1FFEDB9B009E76FE /* Products */;
-					ProjectRef = BC30E7FA1FFEDB9B009E76FE /* Pods.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -899,32 +719,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BC30E8E21FFEDB9B009E76FE /* Buglife Example.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "Buglife Example.app";
-			remoteRef = BC30E8E11FFEDB9B009E76FE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		BC30E8E51FFEDB9B009E76FE /* Buglife.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Buglife.framework;
 			remoteRef = BC30E8E41FFEDB9B009E76FE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BC30E8E91FFEDB9B009E76FE /* Buglife.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Buglife.framework;
-			remoteRef = BC30E8E81FFEDB9B009E76FE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BC30E8EB1FFEDB9B009E76FE /* Pods_Buglife_Example.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_Buglife_Example.framework;
-			remoteRef = BC30E8EA1FFEDB9B009E76FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -943,7 +742,6 @@
 				BC30E9241FFEDB9B009E76FE /* LIFEImagePickerController.m in Sources */,
 				BC30E93A1FFEDB9B009E76FE /* LIFEContinuousForceTouchGestureRecognizer.m in Sources */,
 				BC30E92E1FFEDB9B009E76FE /* LIFEASLLogger.m in Sources */,
-				BC30E8EF1FFEDB9B009E76FE /* Buglife-dummy.m in Sources */,
 				BC30E9261FFEDB9B009E76FE /* LIFELogFacility.m in Sources */,
 				BC30E90B1FFEDB9B009E76FE /* LIFEScreenshotAnnotatorViewController.m in Sources */,
 				BC30E8F51FFEDB9B009E76FE /* NSArray+LIFEAdditions.m in Sources */,
@@ -964,14 +762,11 @@
 				BC30E90E1FFEDB9B009E76FE /* LIFEAwesomeLogger.m in Sources */,
 				BC30E91E1FFEDB9B009E76FE /* LIFEAppInfoProvider.m in Sources */,
 				BC30E9051FFEDB9B009E76FE /* LIFEAVPlayerViewController.m in Sources */,
-				BC30E8F01FFEDB9B009E76FE /* Pods-Buglife Example-dummy.m in Sources */,
 				BC30E9481FFEDB9B009E76FE /* LIFEScreenshotAnnotatorView.m in Sources */,
 				BC30E9111FFEDB9B009E76FE /* LIFETextInputField.m in Sources */,
-				BC30E8ED1FFEDB9B009E76FE /* AwesomeLabel.swift in Sources */,
 				BC30E9221FFEDB9B009E76FE /* LIFEDependencyLoader.m in Sources */,
 				BC30E9351FFEDB9B009E76FE /* LIFETTYLogger.m in Sources */,
 				BC30E9311FFEDB9B009E76FE /* LIFEJSONLogFileFormatter.m in Sources */,
-				BC30E8EC1FFEDB9B009E76FE /* AppDelegate.swift in Sources */,
 				BC30E8F91FFEDB9B009E76FE /* NSString+LIFEAdditions.m in Sources */,
 				BC30E9491FFEDB9B009E76FE /* LIFEStepsToReproduceCell.m in Sources */,
 				BC30E9371FFEDB9B009E76FE /* LIFEArrowAnnotationView.m in Sources */,
@@ -1000,13 +795,11 @@
 				BC30E9341FFEDB9B009E76FE /* LIFENotificationLogger.m in Sources */,
 				BC30E9061FFEDB9B009E76FE /* LIFEComponentPickerViewController.m in Sources */,
 				BC30E9161FFEDB9B009E76FE /* LIFEDeviceInfo.m in Sources */,
-				BC30E8EE1FFEDB9B009E76FE /* ViewController.swift in Sources */,
 				BC30E9101FFEDB9B009E76FE /* LIFEPickerInputField.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNBuglife.m in Sources */,
 				BC30E9441FFEDB9B009E76FE /* LIFEOverlayWindow.m in Sources */,
 				BC30E8F11FFEDB9B009E76FE /* Buglife+UIStuff.m in Sources */,
 				BC30E9081FFEDB9B009E76FE /* LIFENavigationController.m in Sources */,
-				BC30E94D1FFEDB9B009E76FE /* AwesomeLogger.swift in Sources */,
 				BC30E9191FFEDB9B009E76FE /* LIFEReportAttachmentImpl.m in Sources */,
 				BC30E9401FFEDB9B009E76FE /* LIFEComponentPickerCell.m in Sources */,
 				BC30E9461FFEDB9B009E76FE /* LIFEReportView.m in Sources */,
@@ -1037,25 +830,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BC30E7EA1FFEDB9A009E76FE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC30E7EB1FFEDB9A009E76FE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		BC30E7EC1FFEDB9A009E76FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC30E7ED1FFEDB9A009E76FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		58B511ED1A9E6C8500147676 /* Debug */ = {
@@ -1152,6 +926,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNBuglife;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1168,6 +943,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNBuglife;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
