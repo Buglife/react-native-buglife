@@ -10,6 +10,7 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) a
 1. `npm install react-native-buglife --save`
 2. `react-native link` to link the native libraries to the react wrappers.
 
+> If you intend to ship with Buglife to TestFlight or the iOS App Store, you'll need to add `NSPhotoLibraryUsageDescription` to your Info.plist. See [this article](https://www.buglife.com/docs/ios/app-store-builds.html).
 
 # Usage
 
