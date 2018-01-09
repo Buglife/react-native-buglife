@@ -12,44 +12,53 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) a
 
 > If you intend to ship with Buglife to TestFlight or the iOS App Store, you'll need to add `NSPhotoLibraryUsageDescription` to your Info.plist. See [this article](https://www.buglife.com/docs/ios/app-store-builds.html).
 
-# Usage
+# Configuration
 
-1. Require the module
-	
-    ```javascript
-    var Buglife = require('react-native-buglife');
-    ```
-    
-2. If you have already created a Buglife account, initialize the SDK using your organization's API key:
-	
-	```javascript
-	Buglife.startWithAPIKey("YOUR-API-KEY-HERE");
-	```
-	If you haven't signed up & you wish to use Buglife without an account, initialize the SDK using your email address. (Bug reports will be sent to this email address.)
-	
-	```javascript
-	Buglife.startWithEmail("you@yourdomain.com");
-	```
-	For React Native on Android, if you want to use the screenshot invocation, you'll need to put a call to one of these APIs in your Application subclass's `onCreate()` method. 
-	
-3. By default, the Buglife bug reporter is invoked using the shake gesture. However with React Native, shake is also used to present the [developer menu](https://facebook.github.io/react-native/docs/debugging.html).
+### Android native configuration
 
-	You can either disable React Native's developer menu, or use one of the other predefined Buglife invocation methods, such as device screenshots or a floating bug button.
-	
-	```javascript
-	// Screenshot invocation - we recommend this method for invoking the bug reporter
-	Buglife.setInvocationOptions(Buglife.invocationOptionsScreenshot);
-	
-	// Floating bug button
-	Buglife.setInvocationOptions(Buglife.invocationOptionsFloatingButton);
-	```
-4. You may want to add the reporter's email address or other account identifier to your bug reports. You can do this with 
-	```javascript
-	// Set an email address
-	Buglife.setUserEmail("name@example.com")
-	// Set a user identifier
-	Buglife.setUserIdentifier("account name")
-	```
+Add the following lines to the end of the `onCreate()` method in your main `Application` subclass. (If your app doesn't have one already, create an Application subclass and declare it in `AndroidManifest.xml`.)
+
+```java
+Buglife.initWithEmail(this, "you@yourdomain.com");
+Buglife.setInvocationOptions(Buglife.invocationOptionsScreenshot);
+```
+
+### iOS native configuration
+
+Add the following to your app delegate's `application:didFinishLaunchingWithOptions:` method:
+
+```objective-c
+[[Buglife sharedBuglife] startWithEmail:@"you@yourdomain.com"];
+[[Buglife sharedBuglife] setInvocationOptions:LIFEInvocationOptionsScreenshot];
+```
+
+> If you plan on shipping either to TestFlight or the iOS App Store, you'll need to add the `NSPhotoLibraryUsageDescription` key to your iOS app's Info.plist. See the Buglife [iOS App Store documentation](https://www.buglife.com/docs/ios/app-store-builds.html).
+
+### Javascript configuration
+
+Import & initialize Buglife within `App.js`:
+
+```javascript
+var Buglife = require('react-native-buglife');
+```
+
+### Build & run
+
+Build & run on a device, then take a screenshot to invoke the bug reporter! Submit your first bug report, and it'll show up in your email.
+
+# Customization
+
+### User identification
+
+You may want to add the reporter's email address or other account identifier to your bug reports. You can do this with 
+
+```javascript
+// Set an email address
+Buglife.setUserEmail("name@example.com");
+
+// Set a user identifier
+Buglife.setUserIdentifier("account name");
+```
 	
 
 ### Attachments
@@ -74,4 +83,4 @@ eventEmitter.addListener(Buglife.BuglifeAttachmentRequest, () => {
 });
 ```
 
-For advanced usage & features (customization, user identification, etc), check out the official Buglife [documentation](http://buglife.com/docs).
+For advanced usage & features (customization, user identification, etc), check out the official Buglife [documentation](https://www.buglife.com/docs/react-native).
