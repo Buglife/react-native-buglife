@@ -3,6 +3,8 @@ react-native-buglife
 
 React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) and [Buglife Android](https://github.com/Buglife/buglife-android).
 
+[![npm version](https://img.shields.io/npm/v/react-native-buglife.svg)](https://www.npmjs.com/package/react-native-buglife)
+
 # Installation
 
 1. `npm install react-native-buglife --save`
