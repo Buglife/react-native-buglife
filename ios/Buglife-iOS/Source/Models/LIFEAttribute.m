@@ -23,19 +23,32 @@
 
 @property (nonatomic) LIFEAttributeValueType valueType;
 @property (nonatomic) NSObject *value;
+@property (nonatomic) LIFEAttributeFlags flags;
 
 @end
 
 @implementation LIFEAttribute
 
-- (instancetype)initWithValueType:(LIFEAttributeValueType)valueType value:(NSObject *)value
+- (instancetype)initWithValueType:(LIFEAttributeValueType)valueType value:(NSObject *)value flags:(LIFEAttributeFlags)flags
 {
     self = [super init];
     if (self) {
         _valueType = valueType;
         _value = value;
+        _flags = flags;
     }
     return self;
+}
+
++ (instancetype)attributeWithBool:(BOOL)value flags:(LIFEAttributeFlags)flags
+{
+    NSNumber *boxedValue = [NSNumber numberWithBool:value];
+    return [[self alloc] initWithValueType:LIFEAttributeValueTypeBool value:boxedValue flags:flags];
+}
+
++ (instancetype)attributeWithString:(NSString *)stringValue flags:(LIFEAttributeFlags)flags
+{
+    return [[self alloc] initWithValueType:LIFEAttributeValueTypeString value:stringValue flags:flags];
 }
 
 #pragma mark - NSCoding
@@ -75,6 +88,7 @@
     
     [dict life_safeSetObject:@(_valueType) forKey:@"attribute_type"];
     [dict life_safeSetObject:_value forKey:@"attribute_value"];
+    [dict life_safeSetObject:@(_flags) forKey:@"flag"];
     
     return [NSDictionary dictionaryWithDictionary:dict];
 }

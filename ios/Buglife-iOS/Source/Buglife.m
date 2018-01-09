@@ -48,7 +48,7 @@
 #import "LIFEVideoAttachment.h"
 #import "LIFEImagePickerController.h"
 
-static NSString * const kSDKVersion = @"1.9.5";
+static NSString * const kSDKVersion = @"2.1.0";
 void life_dispatch_async_to_main_queue(dispatch_block_t block);
 
 LIFEAttachmentType * const LIFEAttachmentTypeIdentifierText   = @"public.plain-text";
@@ -764,30 +764,9 @@ static const NSTimeInterval kAttachmentRequestTimerDuration = 3;
     if (stringValue == nil) {
         [self removeAttribute:attributeKey];
     } else {
-        LIFEAttribute *attribute = [[LIFEAttribute alloc] initWithValueType:LIFEAttributeValueTypeString value:stringValue];
+        LIFEAttribute *attribute = [[LIFEAttribute alloc] initWithValueType:LIFEAttributeValueTypeString value:stringValue flags:LIFEAttributeFlagCustom];
         [self _setAttribute:attribute forKey:attributeKey];
     }
-}
-
-- (void)setIntValue:(int)intValue forAttribute:(NSString *)attributeKey
-{
-    NSNumber *value = [NSNumber numberWithInt:intValue];
-    LIFEAttribute *attribute = [[LIFEAttribute alloc] initWithValueType:LIFEAttributeValueTypeInt value:value];
-    [self _setAttribute:attribute forKey:attributeKey];
-}
-
-- (void)setFloatValue:(float)floatValue forAttribute:(NSString *)attributeKey
-{
-    NSNumber *value = [NSNumber numberWithFloat:floatValue];
-    LIFEAttribute *attribute = [[LIFEAttribute alloc] initWithValueType:LIFEAttributeValueTypeFloat value:value];
-    [self _setAttribute:attribute forKey:attributeKey];
-}
-
-- (void)setBoolValue:(BOOL)boolValue forAttribute:(NSString *)attributeKey
-{
-    NSNumber *value = [NSNumber numberWithBool:boolValue];
-    LIFEAttribute *attribute = [[LIFEAttribute alloc] initWithValueType:LIFEAttributeValueTypeBool value:value];
-    [self _setAttribute:attribute forKey:attributeKey];
 }
 
 - (void)removeAttribute:(NSString *)attributeKey
