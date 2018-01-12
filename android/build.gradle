@@ -2,6 +2,9 @@
 buildscript {
     repositories {
         jcenter()
+        flatDir {
+            dirs 'aars'
+        }
     }
 
     dependencies {
@@ -32,6 +35,8 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile 'com.buglife.sdk:buglife-android:1.2.2'
+    // compile 'com.buglife.sdk:buglife-android:1.2.2'
+    compile (name: 'buglife-android-release', ext: 'aar')
+
 }
   
