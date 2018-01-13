@@ -36,7 +36,10 @@ repositories {
 dependencies {
     compile 'com.facebook.react:react-native:+'
     // compile 'com.buglife.sdk:buglife-android:1.2.2'
-    compile (name: 'buglife-android-release', ext: 'aar')
+    compile('com.buglife.sdk:buglife-android-release@aar') {
+        transitive=false
+        changing=true
+    }
 
 }
   
