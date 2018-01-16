@@ -23,6 +23,28 @@ Buglife.initWithEmail(this, "you@yourdomain.com");
 Buglife.setInvocationOptions(Buglife.invocationOptionsScreenshot);
 ```
 
+If you are not prompted to do so by Android Studio, add the following maven repository to your _project's_ build.gradle `buildscript` section:
+```
+maven {
+    url 'https://maven.google.com/'
+    name 'Google'
+}
+```
+
+eg. 
+```groovy
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    ...
+}
+```
+
 You may also need to set your app's `compileSdkVersion` to 26, and `minSdkVersion` to at least 16.
 
 ### iOS native configuration
