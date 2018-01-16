@@ -20,7 +20,7 @@ Add the following lines to the end of the `onCreate()` method in your main `Appl
 
 ```java
 Buglife.initWithEmail(this, "you@yourdomain.com");
-Buglife.setInvocationOptions(Buglife.invocationOptionsScreenshot);
+Buglife.setInvocationMethod(InvocationMethod.SCREENSHOT);
 ```
 
 If you are not prompted to do so by Android Studio, add the following maven repository to your _project's_ build.gradle `buildscript` section:
