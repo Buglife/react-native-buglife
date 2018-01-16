@@ -23,6 +23,8 @@ Buglife.initWithEmail(this, "you@yourdomain.com");
 Buglife.setInvocationOptions(Buglife.invocationOptionsScreenshot);
 ```
 
+You may also need to set your app's `compileSdkVersion` to 26, and `minSdkVersion` to at least 16.
+
 ### iOS native configuration
 
 Add the following to your app delegate's `application:didFinishLaunchingWithOptions:` method:
