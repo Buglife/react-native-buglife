@@ -33,7 +33,7 @@ RCT_ENUM_CONVERTER(LIFEInvocationOptions, (@{ @"invocationOptionsNone" : @(LIFEI
 
 @implementation RNBuglife
 
-RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE(Buglife);
 
 RCT_EXPORT_METHOD(setInvocationOptions:(LIFEInvocationOptions)invocationOptions)
 {

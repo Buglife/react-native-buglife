@@ -5,6 +5,6 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNBuglife } = NativeModules;
+const Buglife = NativeModules.Buglife;
 
-export default RNBuglife;
+module.exports = Buglife;
