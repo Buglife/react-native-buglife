@@ -1,0 +1,5 @@
+rootProject.name = 'reactnativebuglifeexample'
+include ':react-native-buglife'
+project(':react-native-buglife').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-buglife/android')
+
+include ':app'

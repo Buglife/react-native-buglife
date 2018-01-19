@@ -16,47 +16,56 @@ React Native wrapper for [Buglife iOS](https://github.com/Buglife/Buglife-iOS) a
 
 ### Android native configuration
 
-Add the following lines to the end of the `onCreate()` method in your main `Application` subclass. (If your app doesn't have one already, create an Application subclass and declare it in `AndroidManifest.xml`.)
+1. Open your app's `build.gradle`, and make sure the `compileSdkVersion` is at least 26, and `minSdkVersion` is at least 16.
 
-```java
-Buglife.initWithEmail(this, "you@yourdomain.com");
-Buglife.setInvocationMethod(InvocationMethod.SCREENSHOT);
-```
-
-If you are not prompted to do so by Android Studio, add the following maven repository to your _project's_ build.gradle `buildscript` section:
-```
-maven {
-    url 'https://maven.google.com/'
-    name 'Google'
-}
-```
-
-eg. 
-```groovy
-buildscript {
-    repositories {
-        jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+2. If you are not prompted to do so by Android Studio, add the following maven repository to your _project's_ build.gradle `buildscript` section:
+	
+    ```
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
     }
-    ...
-}
-```
+    ```
+    
+    eg. 
+    ```groovy
+    buildscript {
+        repositories {
+            jcenter()
+            maven {
+                url 'https://maven.google.com/'
+                name 'Google'
+            }
+        }
+        ...
+    }
+    ```
 
-You may also need to set your app's `compileSdkVersion` to 26, and `minSdkVersion` to at least 16.
+3. Add the following lines to the end of the `onCreate()` method in your main `Application` subclass. (If your app doesn't have one already, create an Application subclass and declare it in `AndroidManifest.xml`.)
+	
+    ```java
+    Buglife.initWithEmail(this, "you@yourdomain.com");
+    Buglife.setInvocationMethod(InvocationMethod.SCREENSHOT);
+    ```
+    
+	Be sure to replace `you@yourdomain.com` with your own email address, as bug reports will be sent to this address.
 
 ### iOS native configuration
 
-Add the following to your app delegate's `application:didFinishLaunchingWithOptions:` method:
+1. Open `AppDelegate.m` and add the following import statement below the others:
+	
+	```objective-c
+	#import "Buglife.h"
+	```
 
-```objective-c
-[[Buglife sharedBuglife] startWithEmail:@"you@yourdomain.com"];
-[[Buglife sharedBuglife] setInvocationOptions:LIFEInvocationOptionsScreenshot];
-```
+2. Add the following to the end of the `application:didFinishLaunchingWithOptions:` method in `AppDelegate.m`:
+    
+    ```objective-c
+    [[Buglife sharedBuglife] startWithEmail:@"you@yourdomain.com"];
+    [[Buglife sharedBuglife] setInvocationOptions:LIFEInvocationOptionsScreenshot];
+    ```
 
-> If you plan on shipping either to TestFlight or the iOS App Store, you'll need to add the `NSPhotoLibraryUsageDescription` key to your iOS app's Info.plist. See the Buglife [iOS App Store documentation](https://www.buglife.com/docs/ios/app-store-builds.html).
+3. Add the `NSPhotoLibraryUsageDescription` key to your iOS app's Info.plist if it doesn't have it already. See the Buglife [iOS App Store documentation](https://www.buglife.com/docs/ios/app-store-builds.html).
 
 ### Javascript configuration
 
