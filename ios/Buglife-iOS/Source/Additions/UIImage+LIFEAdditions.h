@@ -1,8 +1,18 @@
 //
 //  UIImage+LIFEAdditions.h
-//  Pods
+//  Copyright (C) 2015-2018 Buglife, Inc.
 //
-//  Created by David Schukin on 10/20/15.
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
 //
 //
 
@@ -17,8 +27,9 @@ void LIFELoadCategoryFor_UIImageLIFEAdditions(void);
 
 @interface UIImage (LIFEAdditions)
 
-- (null_unspecified UIImage *)life_resizedImageWithScaleFactor:(CGFloat)scaleFactor interpolationQuality:(CGInterpolationQuality)quality;
-- (null_unspecified UIImage *)life_resizedImage:(CGSize)newSize interpolationQuality:(CGInterpolationQuality)quality;
+- (null_unspecified instancetype)life_resizedImageWithScaleFactor:(CGFloat)scaleFactor interpolationQuality:(CGInterpolationQuality)quality;
+- (null_unspecified instancetype)life_resizedImage:(CGSize)newSize interpolationQuality:(CGInterpolationQuality)quality;
++ (nonnull instancetype)life_dragonflyIconWithColor:(nonnull UIColor *)color;
 
 @end
 
@@ -33,7 +44,6 @@ void LIFELoadCategoryFor_UIImageLIFEAdditions(void);
 
 #pragma mark - Icons
 
-+ (nonnull UIImage *)life_dragonflyIconWithColor:(nonnull UIColor *)color;
 + (nonnull UIImage *)life_arrowToolbarIcon;
 + (nonnull UIImage *)life_loupeIcon;
 + (nonnull UIImage *)life_pixelateIcon;
@@ -44,5 +54,9 @@ void LIFELoadCategoryFor_UIImageLIFEAdditions(void);
 #pragma mark - Blur
 
 + (nonnull UIImage *)image:(nonnull UIImage *)image pixelatedImageWithAmount:(CGFloat)amount;
+
+#pragma mark - Rounded rects
+
++ (nonnull UIImage *)life_resizableRoundedRectWithHorizontalInset:(CGFloat)insetX;
 
 @end

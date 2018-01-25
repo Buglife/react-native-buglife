@@ -25,6 +25,10 @@
 #import "NSMutableDictionary+LIFEAdditions.h"
 #import "NSString+LIFEAdditions.h"
 #import "UIDevice+LIFEAdditions.h"
+#import "UIColor+LIFEAdditions.h"
+#import "UIViewController+LIFEAdditions.h"
+#import "UIApplication+LIFEAdditions.h"
+#import "UIControl+LIFEAdditions.h"
 
 @implementation LIFECategories
 
@@ -40,6 +44,10 @@
         LIFELoadCategoryFor_NSStringLIFEAdditions();
         LIFELoadCategoryFor_NSMutableDictionaryLIFEAdditions();
         LIFELoadCategoryFor_UIDeviceLIFEAdditions();
+        LIFELoadCategoryFor_UIColorLIFEAdditions();
+        LIFELoadCategoryFor_UIViewControllerLIFEAdditions();
+        LIFELoadCategoryFor_UIApplicationLIFEAdditions();
+        LIFELoadCategoryFor_UIControlLIFEAdditions();
     });
 }
 

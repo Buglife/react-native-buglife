@@ -47,8 +47,13 @@
 #import "NSArray+LIFEAdditions.h"
 #import "LIFEVideoAttachment.h"
 #import "LIFEImagePickerController.h"
+#import "LIFEContainerWindow.h"
+#import "LIFEContainerViewController.h"
+#import "LIFEImageEditorViewController.h"
+#import "LIFEToastController.h"
+#import "UIControl+LIFEAdditions.h"
 
-static NSString * const kSDKVersion = @"2.1.0";
+static NSString * const kSDKVersion = @"2.6.0";
 void life_dispatch_async_to_main_queue(dispatch_block_t block);
 
 LIFEAttachmentType * const LIFEAttachmentTypeIdentifierText   = @"public.plain-text";
@@ -73,7 +78,7 @@ static NSString * const LIFE_UIScreenCapturedDidChangeNotification = @"UIScreenC
 
 const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 6;
 
-@interface Buglife () <LIFEReporterDelegate, LIFEBugButtonWindowDelegate>
+@interface Buglife () <LIFEReporterDelegate, LIFEBugButtonWindowDelegate, LIFEImageEditorViewControllerDelegate, LIFEReportViewControllerDelegate>
 
 @property (nonatomic) LIFEReportOwner *reportOwner;
 @property (nonatomic) BOOL debugMode;
@@ -82,6 +87,7 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
 // Used to store weak refs to windows for UIAlertControllers, so
 // we can set the window to hidden after the alert is dismissed
 @property (nonatomic, weak) LIFEOverlayWindow *overlayWindow;
+@property (nonatomic) LIFEContainerWindow *containerWindow;
 @property (nonatomic) BOOL reportAlertOrWindowVisible;
 @property (nonatomic) LIFEDataProvider *dataProvider;
 @property (nonatomic) LIFEBugButtonWindow *bugButtonWindow;
@@ -95,12 +101,20 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
 
 @property (nonatomic) LIFEInputField *userEmailField;
 @property (nonatomic) NSMutableDictionary<NSString *, LIFEAttribute *> *attributes;
+// This should only be used when presenting the initial
+// image editor
+@property (nonatomic, nullable) LIFEReportBuilder *reportBuilder;
 
 /**
  These should be made public in an upcoming release.
  */
 @property (nonatomic, null_resettable) NSString *thankYouMessage;
 @property (nonatomic, null_resettable) NSString *titleForReportViewController;
+
+// Legacy features, but some people might still want to use them.
+// If they're dying for it, let them use it via private API.
+@property (nonatomic) BOOL hideUntilNextLaunchButtonEnabled;
+@property (nonatomic) BOOL useLegacyReporterUI;
 
 @end
 
@@ -128,9 +142,12 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
     if (self) {
         _debugMode = NO;
         _reportAlertOrWindowVisible = NO;
+        _hideUntilNextLaunchButtonEnabled = NO;
+        _captureUserEventsEnabled = YES;
         _attachmentManager = [[LIFEAttachmentManager alloc] init];
         _attributes = [[NSMutableDictionary alloc] init];
         self.invocationOptions = LIFEInvocationOptionsShake;
+        (void)[LIFEAwesomeLogger sharedLogger];
     }
     return self;
 }
@@ -187,6 +204,7 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
     
     [self _enableOrDisableBugButton];
     [self.dataProvider flushPendingReportsAfterDelay:2.0];
+    [self.dataProvider logClientEventWithName:@"app_launch" afterDelay:10.0];
 }
 
 - (BOOL)_isStarted
@@ -230,6 +248,17 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
         if ([self _isStarted]) {
             [self _enableOrDisableBugButton];
         }
+    }
+}
+- (void)setCaptureUserEventsEnabled:(BOOL)captureUserEventsEnabled
+{
+    BOOL old = _captureUserEventsEnabled;
+    if (old != captureUserEventsEnabled)
+    {
+        _captureUserEventsEnabled = captureUserEventsEnabled;
+    }
+    if ([self _isStarted] && captureUserEventsEnabled && !old){
+        [UIControl life_swizzleSendAction];
     }
 }
 
@@ -277,7 +306,7 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
         LIFELogExtWarn(@"Buglife warning: Calling %@.%@ off the main thread is unsupported!", NSStringFromClass([self class]), NSStringFromSelector(@selector(screenshot)));
     }
 
-    return [LIFEUIApplication life_screenshot];
+    return [[UIApplication sharedApplication] life_screenshot];
 }
 
 - (id<LIFEAppearance>)appearance
@@ -333,6 +362,7 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
     if (invocation == LIFEInvocationOptionsNone) {
         // If the reporter was presented manually, we should log it. Otherwise it should be logged at the actual invocation time
         [self _notifyBuglifeInvoked];
+        [self.dataProvider logClientEventWithName:@"reporter_invoked_manually"];
     }
     
     self.lastUsedInovcationMethod = invocation;
@@ -340,38 +370,109 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
     
     [self.bugButtonWindow setBugButtonHidden:YES animated:animated];
     
-    LIFEReportWindow *reportWindow = [LIFEReportWindow reportWindow];
-    reportWindow.reporterDelegate = self;
+    LIFEReportWindow *reportWindow;
+    
+    if (self.useLegacyReporterUI) {
+        reportWindow = [LIFEReportWindow reportWindow];
+        reportWindow.reporterDelegate = self;
+    }
     
     LIFEReportBuilder *reportBuilder = [[LIFEReportBuilder alloc] init];
     reportBuilder.attributes = self.attributes;
     reportBuilder.creationDate = [NSDate date];
     LIFEScreenshotContext *context = [LIFEScreenshotContext currentContext];
-    BOOL simulateScreenshotCapture = NO;
     
-    if (screenshot) {
-        simulateScreenshotCapture = (invocation != LIFEInvocationOptionsScreenshot);
-        [reportWindow presentReporterWithReportBuilder:reportBuilder screenshot:screenshot context:context simulateScreenshotCapture:simulateScreenshotCapture animated:animated];
-    } else {
-        [reportWindow presentReporterWithReportBuilder:reportBuilder context:context animated:animated completion:^(LIFEReportTableViewController *reportTableViewController) {
+    if (!self.useLegacyReporterUI) {
+        UIViewController *vc;
+        self.reportBuilder = reportBuilder;
+        void (^completionBlock)(void) = nil;
+        
+        if (screenshot) {
+            let ivc = [[LIFEImageEditorViewController alloc] initWithScreenshot:screenshot context:context];
+            ivc.initialViewController = YES;
+            ivc.delegate = self;
+            vc = ivc;
+        } else {
+            let rvc = [[LIFEReportTableViewController alloc] initWithReportBuilder:self.reportBuilder];
+            rvc.delegate = self;
+            vc = rvc;
+            
             if (invocation == LIFEInvocationOptionsScreenRecordingFinished) {
-                [reportTableViewController addLastVideoAsAttachment];
+                completionBlock = ^{
+                    [rvc addLastVideoAsAttachment];
+                };
             }
-        }];
+        }
+        
+        let nav = [[LIFENavigationController alloc] initWithRootViewController:vc];
+        [self _showContainerWindowWithViewController:nav animated:animated completion:completionBlock];
+    } else {
+        if (screenshot) {
+            BOOL simulateScreenshotCapture = (invocation != LIFEInvocationOptionsScreenshot);
+            [reportWindow presentReporterWithReportBuilder:reportBuilder screenshot:screenshot context:context simulateScreenshotCapture:simulateScreenshotCapture animated:animated];
+        } else {
+            [reportWindow presentReporterWithReportBuilder:reportBuilder context:context animated:animated completion:^(LIFEReportTableViewController *reportTableViewController) {
+                if (invocation == LIFEInvocationOptionsScreenRecordingFinished) {
+                    [reportTableViewController addLastVideoAsAttachment];
+                }
+            }];
+        }
     }
     
     [self _requestAttachmentsForReportBuilder:reportBuilder];
     
-    self.reportWindow = reportWindow;
+    if (self.useLegacyReporterUI) {
+        self.reportWindow = reportWindow;
+    }
+    
+    [self.dataProvider logClientEventWithName:@"presented_reporter" afterDelay:2.0];
 }
 
-- (void)_dismissReporterAnimated:(BOOL)animated andShowThankYouDialog:(BOOL)shoudShowThankYouDialog
+- (void)_showContainerWindowWithViewController:(nonnull UIViewController *)viewController animated:(BOOL)animated completion:(void (^)(void))completion
+{
+    if (self.containerWindow == nil) {
+        self.containerWindow = [LIFEContainerWindow window];
+        self.containerWindow.hidden = NO;
+    }
+    
+    [self.containerWindow.containerViewController life_presentViewController:viewController animated:animated completion:completion];
+    self.reportAlertOrWindowVisible = YES;
+}
+
+- (void)_dismissReporterAnimated:(BOOL)animated
+{
+    __weak typeof(self) weakSelf = self;
+    
+    [self.containerWindow.containerViewController life_dismissEverythingAnimated:animated completion:^{
+        __strong Buglife *strongSelf = weakSelf;
+        if (strongSelf) {
+            [strongSelf _reporterAndThankYouDialogDidDismissAnimated:animated];
+        }
+    }];
+    
+    [self.reportWindow dismissAnimated:animated completion:^{
+        __strong Buglife *strongSelf = weakSelf;
+        if (strongSelf) {
+            [strongSelf _reporterAndThankYouDialogDidDismissAnimated:animated];
+        }
+    }];
+}
+
+- (void)_dismissReporterWithWindowBlindsAnimation:(BOOL)animated andShowThankYouDialog:(BOOL)shoudShowThankYouDialog
 {
     if (shoudShowThankYouDialog && [self.delegate respondsToSelector:@selector(buglifeWillPresentReportCompletedDialog:)]) {
         shoudShowThankYouDialog = [self.delegate buglifeWillPresentReportCompletedDialog:self];
     }
     
     __weak typeof(self) weakSelf = self;
+    
+    LIFEToastController *toast = [[LIFEToastController alloc] init];
+    [self.containerWindow.containerViewController dismissWithWindowBlindsAnimation:animated showToast:toast completion:^{
+        __strong Buglife *strongSelf = weakSelf;
+        if (strongSelf) {
+            [strongSelf _reporterAndThankYouDialogDidDismissAnimated:animated];
+        }
+    }];
 
     [self.reportWindow dismissAnimated:animated completion:^{
         __strong Buglife *strongSelf = weakSelf;
@@ -399,6 +500,9 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
     self.reportWindow.rootViewController = nil;
     self.reportWindow.hidden = YES;
     self.reportWindow = nil;
+    self.containerWindow.rootViewController = nil;
+    self.containerWindow.hidden = YES;
+    self.containerWindow = nil;
     self.reportAlertOrWindowVisible = NO;
     [self.bugButtonWindow setBugButtonHidden:NO animated:animated];
 }
@@ -476,6 +580,14 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
             }
 
             self.overlayWindow = nil;
+            
+            __strong LIFEContainerWindow *strongContainerWindow = self.containerWindow;
+            
+            if (strongContainerWindow) {
+                strongContainerWindow.hidden = YES;
+            }
+            
+            self.containerWindow = nil;
         }
         
         self.capturedOrientation = [UIApplication sharedApplication].statusBarOrientation;
@@ -506,7 +618,7 @@ const LIFEInvocationOptions LIFEInvocationOptionsScreenRecordingFinished = 1 << 
 
 - (UIImage *)_screenshot
 {
-    return [LIFEUIApplication life_screenshot];
+    return [[UIApplication sharedApplication] life_screenshot];
 }
 
 #pragma mark - Test helpers
@@ -525,16 +637,53 @@ void life_dispatch_async_to_main_queue(dispatch_block_t block) {
     return [[UIApplication sharedApplication] keyWindow];
 }
 
+#pragma mark - LIFEImageEditorViewControllerDelegate
+
+- (void)imageEditorViewController:(LIFEImageEditorViewController *)controller willCompleteWithAnnotatedImage:(LIFEAnnotatedImage *)annotatedImage
+{
+    [self.reportBuilder addAnnotatedImage:annotatedImage];
+    let vc = [[LIFEReportTableViewController alloc] initWithReportBuilder:self.reportBuilder];
+    vc.delegate = self;
+    [self.containerWindow.containerViewController life_setChildViewController:vc animated:YES completion:nil];
+}
+
+- (void)imageEditorViewControllerDidCancel:(nonnull LIFEImageEditorViewController *)controller
+{
+    [self _dismissReporterAnimated:YES];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LIFENotificationUserCanceledReport object:self];
+    if ([self.delegate respondsToSelector:@selector(buglife:userCanceledReportWithAttributes:)])
+    {
+        [self.delegate buglife:self userCanceledReportWithAttributes:[NSDictionary dictionaryWithDictionary:self.attributes]];
+    }
+}
+
+#pragma mark - LIFEReportViewControllerDelegate
+
+- (BOOL)reportViewControllerShouldSubmitSynchronously:(nonnull LIFEReportTableViewController *)reportViewController
+{
+    return [self reporterShouldSubmitSynchronously:nil];
+}
+
+- (void)reportViewControllerDidCancel:(nonnull LIFEReportTableViewController *)reportViewController
+{
+    [self reporterDidCancel:nil];
+}
+
+- (void)reportViewController:(nonnull LIFEReportTableViewController *)reportViewController shouldCompleteReportBuilder:(nonnull LIFEReportBuilder *)reportBuilder completion:(void (^_Nullable)(BOOL finished))completion
+{
+    [self reporter:nil shouldCompleteReportBuilder:reportBuilder completion:completion];
+}
+
 #pragma mark - LIFEReporterDelegate
 
-- (BOOL)reporterShouldSubmitSynchronously:(nonnull LIFEReportWindow *)reporter
+- (BOOL)reporterShouldSubmitSynchronously:(nullable LIFEReportWindow *)reporter
 {
     return self.retryPolicy == LIFERetryPolicyManualRetry;
 }
 
-- (void)reporterDidCancel:(nonnull LIFEReportWindow *)reporter
+- (void)reporterDidCancel:(nullable LIFEReportWindow *)reporter
 {
-    [self _dismissReporterAnimated:YES andShowThankYouDialog:NO];
+    [self _dismissReporterAnimated:YES];
     [[NSNotificationCenter defaultCenter] postNotificationName:LIFENotificationUserCanceledReport object:self];
     if ([self.delegate respondsToSelector:@selector(buglife:userCanceledReportWithAttributes:)])
     {
@@ -563,7 +712,7 @@ void life_dispatch_async_to_main_queue(dispatch_block_t block) {
                     [self _didCompleteReport:report];
                     
                     if (waitUntilSuccessfulSubmissionToDismissReporter) {
-                        [self _dismissReporterAnimated:YES andShowThankYouDialog:YES];
+                        [self _dismissReporterWithWindowBlindsAnimation:YES andShowThankYouDialog:YES];
                     }
                 }
             });
@@ -575,7 +724,7 @@ void life_dispatch_async_to_main_queue(dispatch_block_t block) {
     [[NSNotificationCenter defaultCenter] postNotificationName:LIFENotificationUserSubmittedReport object:self userInfo:[NSDictionary dictionaryWithDictionary:self.attributes]];
     
     if (!waitUntilSuccessfulSubmissionToDismissReporter) {
-        [self _dismissReporterAnimated:YES andShowThankYouDialog:YES];
+        [self _dismissReporterWithWindowBlindsAnimation:YES andShowThankYouDialog:YES];
     }
 }
 

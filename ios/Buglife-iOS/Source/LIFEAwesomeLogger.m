@@ -17,7 +17,6 @@
 
 
 #import "LIFEAwesomeLogger.h"
-#import "LIFEASLLogger.h"
 #import "LIFETTYLogger.h"
 #import "LIFELog.h"
 #import "LIFEFileLogger.h"
@@ -92,6 +91,9 @@ static const BOOL kConsoleLoggingEnabledDefault = YES;
     _fileLogger.rollingFrequency = 0;
     
     _workQueue = dispatch_queue_create("com.buglife.LIFEBuglifeLogger.workQueue", DISPATCH_QUEUE_SERIAL);
+    
+    self.notificationLogger = [[LIFENotificationLogger alloc] init];
+    [self.notificationLogger beginLoggingNotifications];
 
     // Wrap this in a dispatch once;
     // API consumers *should* use the shared singleton, but in case
@@ -100,7 +102,6 @@ static const BOOL kConsoleLoggingEnabledDefault = YES;
     dispatch_once(&onceToken, ^{
         [LIFELogImpl addLogger:_fileLogger];
         
-        [LIFEASLLogger sharedInstance].logFormatter = [[LIFEContextAwareLogFormatter alloc] init];
         [LIFETTYLogger sharedInstance].logFormatter = [[LIFEContextAwareLogFormatter alloc] init];
         
         self.consoleLoggingEnabledImpl = kConsoleLoggingEnabledDefault;
@@ -247,12 +248,6 @@ static const BOOL kConsoleLoggingEnabledDefault = YES;
                                                            timestamp:nil];
 
     [LIFELogImpl log:asynchronous message:logMessage];
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        self.notificationLogger = [[LIFENotificationLogger alloc] init];
-        [self.notificationLogger beginLoggingNotifications];
-    });
 }
 
 - (void)_logDebugMessage:(NSString *)message context:(NSInteger)context
@@ -308,16 +303,8 @@ static const BOOL kConsoleLoggingEnabledDefault = YES;
         _consoleLoggingEnabledImpl = consoleLoggingEnabledImpl;
         
         if (consoleLoggingEnabledImpl) {
-            [LIFELogImpl addLogger:[LIFEASLLogger sharedInstance]];
-            
-            // On iOS 10, logging to both the ASL & TTY results in duplicate console logs.
-            // So only log to the TTY on iOS 9 or earlier, or if the user
-            // is running the simulator
-            if (![LIFECompatibilityUtils isiOS10OrHigher] || [[UIDevice currentDevice] life_isSimulator]) {
-                [LIFELogImpl addLogger:[LIFETTYLogger sharedInstance]];
-            }
+            [LIFELogImpl addLogger:[LIFETTYLogger sharedInstance]];
         } else {
-            [LIFELogImpl removeLogger:[LIFEASLLogger sharedInstance]];
             [LIFELogImpl removeLogger:[LIFETTYLogger sharedInstance]];
         }
     }

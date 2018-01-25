@@ -19,6 +19,16 @@
 #import <UIKit/UIKit.h>
 
 @interface LIFENavigationController : UINavigationController
+
+@property (nonatomic) BOOL navigationBarStyleClear;
+
+// This should only be used for temporarily hiding the status bar;
+// i.e. when you need to coordinate a transition.
+// Otherwise, by default LIFENavigationController should always show
+// the status bar, and use the style specified by LIFEAppearance.
+- (void)enableStatusBarOverrideHidden:(BOOL)hidden style:(UIStatusBarStyle)style;
+- (void)disableStatusBarOverride;
+
 @end
 
 @interface LIFENavigationBar : UINavigationBar

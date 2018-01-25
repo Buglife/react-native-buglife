@@ -346,10 +346,6 @@ CGPoint LIFECGPointApplyScale(CGPoint pointToScale, CGPoint anchor, CGFloat scal
                 [self _updateLoupeAnnotationViews];
             }
             
-            if (annotation.annotationType == LIFEAnnotationTypeBlur) {
-                [self.screenshotAnnotatorView setDarkOverlayHidden:NO animated:YES];
-            }
-            
             NSParameterAssert(self.annotationViewInProgress == nil);
 
             self.annotationViewInProgress = annotationView;
@@ -415,8 +411,6 @@ CGPoint LIFECGPointApplyScale(CGPoint pointToScale, CGPoint anchor, CGFloat scal
     BOOL isBlur = [annotationView isKindOfClass:[LIFEBlurAnnotationView class]];
     
     if (isBlur) {
-        [self.screenshotAnnotatorView setDarkOverlayHidden:YES animated:YES];
-        
         if ([LIFECompatibilityUtils isForceTouchAvailableForViewController:self]) {
             LIFEContinuousForceTouchGestureRecognizer *forceTouchGestureRecognizer = [[LIFEContinuousForceTouchGestureRecognizer alloc] init];
             forceTouchGestureRecognizer.forceTouchDelegate = self;
@@ -440,7 +434,6 @@ CGPoint LIFECGPointApplyScale(CGPoint pointToScale, CGPoint anchor, CGFloat scal
                 self.panGestureRecognizer.enabled = NO;
                 [self _setChromeVisibilityHiddenForDrawing:YES];
                 self.annotationViewInProgress = (LIFEAnnotationView *)gestureRecognizer.view;
-                [self.screenshotAnnotatorView setDarkOverlayHidden:NO animated:YES];
                 [self.annotationViewInProgress setSelected:YES animated:YES];
                 
                 self.previousStartPointForMovingAnnotation = self.annotationViewInProgress.startPoint;
@@ -462,8 +455,6 @@ CGPoint LIFECGPointApplyScale(CGPoint pointToScale, CGPoint anchor, CGFloat scal
         case UIGestureRecognizerStateChanged:
         {
             CGSize size = self.annotationViewInProgress.bounds.size;
-            LIFEAnnotation *oldAnnotation = self.annotationViewInProgress.annotation;
-            LIFEAnnotation *newAnnotation = nil;
             
             if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
                 UIPanGestureRecognizer *panGestureRecognizer = (UIPanGestureRecognizer *)gestureRecognizer;
@@ -495,8 +486,8 @@ CGPoint LIFECGPointApplyScale(CGPoint pointToScale, CGPoint anchor, CGFloat scal
             // Put it all together
             CGVector startVector = LIFEVectorFromPointAndSize(startPoint, size);
             CGVector endVector = LIFEVectorFromPointAndSize(endPoint, size);
-            oldAnnotation = self.annotationViewInProgress.annotation;
-            newAnnotation = [[LIFEAnnotation alloc] initWithAnnotationType:self.annotationViewInProgress.annotation.annotationType startVector:startVector endVector:endVector];
+            LIFEAnnotation *oldAnnotation = self.annotationViewInProgress.annotation;
+            LIFEAnnotation *newAnnotation = [[LIFEAnnotation alloc] initWithAnnotationType:self.annotationViewInProgress.annotation.annotationType startVector:startVector endVector:endVector];
             newAnnotation = [self _annotationAdjustedForMinimumAndMaximumSize:newAnnotation];
             
             self.annotationViewInProgress.annotation = newAnnotation;
@@ -515,7 +506,6 @@ CGPoint LIFECGPointApplyScale(CGPoint pointToScale, CGPoint anchor, CGFloat scal
             
             if (_activeEditingGestureRecognizers.count == 0) {
                 self.panGestureRecognizer.enabled = YES;
-                [self.screenshotAnnotatorView setDarkOverlayHidden:YES animated:YES];
                 [self.annotationViewInProgress setSelected:NO animated:YES];
                 self.annotationViewInProgress = nil;
                 [self _setChromeVisibilityHiddenForDrawing:NO];
@@ -538,12 +528,10 @@ CGPoint LIFECGPointApplyScale(CGPoint pointToScale, CGPoint anchor, CGFloat scal
 
 - (void)forceTouchRecognized:(LIFEContinuousForceTouchGestureRecognizer *)recognizer
 {
-    [self.screenshotAnnotatorView setDarkOverlayHidden:NO animated:YES];
 }
 
 - (void)forceTouchRecognizer:(LIFEContinuousForceTouchGestureRecognizer *)recognizer didEndWithForce:(CGFloat)force maxForce:(CGFloat)maxForce
 {
-    [self.screenshotAnnotatorView setDarkOverlayHidden:YES animated:YES];
 }
 
 - (void)forceTouchRecognizer:(LIFEContinuousForceTouchGestureRecognizer *)recognizer didMoveWithForce:(CGFloat)force maxForce:(CGFloat)maxForce
@@ -719,23 +707,3 @@ static const CGFloat kMaximumLoupeRadius = 150;
 }
 
 @end
-
-// MARK: CGPoint math
-
-CGPoint LIFECGPointApplyRotation(CGPoint pointToRotate, CGPoint anchor, CGFloat angleInRadians)
-{
-    CGAffineTransform transform = CGAffineTransformIdentity;
-    transform = CGAffineTransformTranslate(transform, anchor.x, anchor.y);
-    transform = CGAffineTransformRotate(transform, angleInRadians);
-    transform = CGAffineTransformTranslate(transform, -anchor.x, -anchor.y); // Translate back
-    return CGPointApplyAffineTransform(pointToRotate, transform);
-}
-
-CGPoint LIFECGPointApplyScale(CGPoint pointToScale, CGPoint anchor, CGFloat scaleAmount)
-{
-    CGAffineTransform transform = CGAffineTransformIdentity;
-    transform = CGAffineTransformTranslate(transform, anchor.x, anchor.y);
-    transform = CGAffineTransformScale(transform, scaleAmount, scaleAmount);
-    transform = CGAffineTransformTranslate(transform, -anchor.x, -anchor.y);
-    return CGPointApplyAffineTransform(pointToScale, transform);
-}

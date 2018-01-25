@@ -50,18 +50,21 @@
 #import "LIFERecordingShrinker.h"
 #import "LIFEUserFacingAttachment.h"
 #import "LIFEAVPlayerViewController.h"
+#import "LIFENavigationController.h"
+#import "LIFEImageEditorViewController.h"
 
 typedef NSString LIFEInputFieldValue;
 
+static let kUseNewImageEditor = YES;
 static let kDefaultCellIdentifier = @"kDefaultCellIdentifier";
 static let kPickerCellIdentifier = @"kPickerCellIdentifier";
 static const CGFloat kDefaultRowHeight = 45;    // apparently this is 45 for grouped tableview style o_O
 static const NSInteger kAttachmentSectionNumber = 0;
 static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
 
-@interface LIFEReportTableViewController () <LIFEScreenshotAnnotatorViewControllerDelegate, LIFEWhatHappenedTextViewDelegate, LIFEStepsToReproTableViewControllerDelegate, LIFETextInputViewControllerDelegate, LIFETextFieldCellDelegate, LIFEPickerViewControllerDelegate>
+@interface LIFEReportTableViewController () <LIFEScreenshotAnnotatorViewControllerDelegate, LIFEWhatHappenedTextViewDelegate, LIFEStepsToReproTableViewControllerDelegate, LIFETextInputViewControllerDelegate, LIFETextFieldCellDelegate, LIFEPickerViewControllerDelegate, LIFEImageEditorViewControllerDelegate>
 
-@property (nonatomic, nonnull) LIFEScreenshotContext *screenshotContext;
+@property (nonatomic, nullable) LIFEScreenshotContext *screenshotContext;
 @property (nonatomic) LIFEImageProcessor *imageProcessor;
 @property (nonatomic) LIFEImagePickerController *imagePickerController;
 @property (nonatomic) LIFEReportBuilder *reportBuilder;
@@ -94,7 +97,12 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
     BOOL _hasAppearedAtLeastOnce;
 }
 
-- (instancetype)initWithReportBuilder:(LIFEReportBuilder *)reportBuilder context:(LIFEScreenshotContext *)context
+- (nonnull instancetype)initWithReportBuilder:(nonnull LIFEReportBuilder *)reportBuilder
+{
+    return [self initWithReportBuilder:reportBuilder context:nil];
+}
+
+- (instancetype)initWithReportBuilder:(LIFEReportBuilder *)reportBuilder context:(nullable LIFEScreenshotContext *)context
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
@@ -191,6 +199,16 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_imagesDidChangeNotification:) name:LIFEReportBuilderAnnotatedImagesDidChangeNotification object:nil];
     
     [self _logWarningIfPhotoLibraryUsageDescriptionRequiredAndMissing];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if ([self.navigationController isKindOfClass:[LIFENavigationController class]]) {
+        let nav = (LIFENavigationController *)self.navigationController;
+        nav.navigationBarStyleClear = NO;
+    }
 }
 
 - (void)_imagesDidChangeNotification:(NSNotification *)notification
@@ -342,17 +360,18 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
 
 - (void)_submitReport
 {
-    [self resignFirstResponder];
-    
     let incompleteInputFields = [self _incompleteInputFields];
-    
+
     if (incompleteInputFields.count > 0) {
         [self _highlightIncompleteInputFieldsAndShowErrorAlert:incompleteInputFields];
         return;
     }
     
+    // Hide keyboard
+    [self.view endEditing:YES];
+
     [[NSNotificationCenter defaultCenter] postNotificationName:LIFENotificationLoggerSendButtonTapped object:nil];
-    
+
     self.doneButton.enabled = NO;
     NSString *whatHappened = self._summaryInputFieldValue;
     LIFEReportBuilder *reportBuilder = self.reportBuilder;
@@ -360,14 +379,14 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
     reportBuilder.reproSteps = self.reproSteps;
     reportBuilder.expectedResults = self.expectedResults;
     reportBuilder.actualResults = self.actualResults;
-    
+
     // Get the email address, using either the email address field (if it's enabled),
     // or the programmatically configured email address
     LIFEInputField *userEmailInputField = [self _userEmailInputField];
-    
+
     if (userEmailInputField) {
         NSString *userInputtedEmailOrEmptyString = self._userEmailInputFieldValue;
-        
+
         if (userInputtedEmailOrEmptyString.length > 0) {
             reportBuilder.userEmail = userInputtedEmailOrEmptyString;
             [LIFEUserDefaults sharedDefaults].lastSubmittedUserEmailFieldValue = userInputtedEmailOrEmptyString;
@@ -375,43 +394,43 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
     } else {
         reportBuilder.userEmail = [Buglife sharedBuglife].userEmail;
     }
-    
+
     // Set custom attribute values w/ new values from custom fields
     {
         NSMutableDictionary<NSString *, LIFEAttribute *> *attributes = reportBuilder.attributes.mutableCopy;
-        
+
         for (LIFEInputField *inputField in self.inputFieldValues.allKeys) {
             if (inputField.isSystemAttribute) {
                 // Skip system attributes since they aren't custom attributes, and will
                 // get added to the report payload separately
                 continue;
             }
-            
+
             let attributeName = inputField.attributeName;
             let inputFieldValue = self.inputFieldValues[inputField];
-            
+
             if (inputFieldValue) {
                 let attribute = [[LIFEAttribute alloc] initWithValueType:LIFEAttributeValueTypeString value:inputFieldValue flags:LIFEAttributeFlagCustom];
                 attributes[attributeName] = attribute;
             }
         }
-        
+
         reportBuilder.attributes = attributes;
     }
-    
+
     void (^completionBlock)(BOOL) = nil;
     BOOL blockingSubmissionEnabled = [self.delegate reportViewControllerShouldSubmitSynchronously:self];
-    
+
     if (blockingSubmissionEnabled) {
         __weak typeof(self) weakSelf = self;
         UIView *loadingView = [self _showBlockingLoadingView];
-        
+
         completionBlock = ^(BOOL submitted) {
             if (!submitted) {
                 [loadingView removeFromSuperview];
-                
+
                 __strong LIFEReportTableViewController *strongSelf = weakSelf;
-                
+
                 if (strongSelf) {
                     strongSelf.doneButton.enabled = YES;
                     [self _showSubmissionErrorAlert];
@@ -419,7 +438,7 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
             }
         };
     }
-    
+
     [self.delegate reportViewController:self shouldCompleteReportBuilder:reportBuilder completion:completionBlock];
 }
 
@@ -717,7 +736,7 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
             if (textInputField.isMultiline) {
                 NSNumber *cachedHeight = self.inputFieldRowHeightCache[inputField];
                 
-                if (cachedHeight) {
+                if (cachedHeight != nil) {
                     return cachedHeight.floatValue;
                 } else {
                     LIFEInputFieldValue *value = self.inputFieldValues[inputField];
@@ -794,9 +813,16 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
             
             if ([userFacingAttachment isKindOfClass:[LIFEAnnotatedImage class]]) {
                 LIFEAnnotatedImage *annotatedImage = (LIFEAnnotatedImage *)userFacingAttachment;
-                LIFEScreenshotAnnotatorViewController *viewController = [[LIFEScreenshotAnnotatorViewController alloc] initWithAnnotatedImage:annotatedImage];
-                viewController.delegate = self;
-                [self.navigationController pushViewController:viewController animated:YES];
+                
+                if (kUseNewImageEditor) {
+                    let vc = [[LIFEImageEditorViewController alloc] initWithAnnotatedImage:annotatedImage];
+                    vc.delegate = self;
+                    [self.navigationController pushViewController:vc animated:YES];
+                } else {
+                    let vc = [[LIFEScreenshotAnnotatorViewController alloc] initWithAnnotatedImage:annotatedImage];
+                    vc.delegate = self;
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
             } else if ([userFacingAttachment isKindOfClass:[LIFEVideoAttachment class]]) {
                 LIFEVideoAttachment *videoAttachment = (LIFEVideoAttachment *)userFacingAttachment;
                 [self _presentVideoPlayerWithAttachment:videoAttachment];
@@ -842,6 +868,18 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
 
 - (void)screenshotAnnotatorViewController:(LIFEScreenshotAnnotatorViewController *)screenshotAnnotatorViewController willCompleteWithAnnotatedImage:(LIFEAnnotatedImage *)annotatedImage
 {
+    [self _willCompleteImageEditorWithAnnotatedImage:annotatedImage];
+}
+
+#pragma mark - LIFEImageEditorViewControllerDelegate
+
+- (void)imageEditorViewController:(nonnull LIFEImageEditorViewController *)controller willCompleteWithAnnotatedImage:(nonnull LIFEAnnotatedImage *)annotatedImage
+{
+    [self _willCompleteImageEditorWithAnnotatedImage:annotatedImage];
+}
+
+- (void)_willCompleteImageEditorWithAnnotatedImage:(nonnull LIFEAnnotatedImage *)annotatedImage
+{
     if (self.indexOfCurrentEditingAnnotatedImage == kNoCurrentEditingAnnotatedImage) {
         LIFELogIntError(@"Completed annotating image, but index is not found");
         NSParameterAssert(NO);
@@ -852,9 +890,12 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
         return;
     }
     
+    // Invalidate the image cache
+    [self.imageProcessor clearImageCache];
+    
     // Replace the stored annotated image
     [self.reportBuilder replaceAnnotatedImageAtIndex:self.indexOfCurrentEditingAnnotatedImage withAnnotatedImage:annotatedImage];
-
+    
     // Reload that row so that the thumbnail is updated
     NSIndexPath *indexPathToReload = [NSIndexPath indexPathForRow:self.indexOfCurrentEditingAnnotatedImage inSection:kAttachmentSectionNumber];
     [self.tableView reloadRowsAtIndexPaths:@[indexPathToReload] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -883,7 +924,7 @@ static const NSInteger kNoCurrentEditingAnnotatedImage = NSNotFound;
         BOOL updateRowHeight = NO;
         NSNumber *oldHeightNum = self.inputFieldRowHeightCache[inputField];
         
-        if (oldHeightNum) {
+        if (oldHeightNum != nil) {
             CGFloat oldHeight = oldHeightNum.floatValue;
             
             if (ABS(oldHeight - newHeight) > 2.0f) {
