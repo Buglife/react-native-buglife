@@ -6,7 +6,7 @@
 //
 
 #import "RNBuglife.h"
-#import "Buglife.h"
+#import <Buglife/Buglife.h>
 #import "RCTConvert.h"
 #import "RCTEventDispatcher.h"
 #import "RCTModuleData.h"
