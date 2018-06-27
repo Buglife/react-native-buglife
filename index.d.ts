@@ -1,12 +1,11 @@
 declare module "react-native-buglife" {
-  type InvocationEventKey =
-    | "invocationOptionsNone"
-    | "invocationOptionsShake"
-    | "invocationOptionsScreenshot"
-    | "invocationOptionsFloatingButton"
-    | "floatingButton";
+  const invocationOptionsNone = 'invocationOptionsNone';
+  const invocationOptionsShake = 'invocationOptionsShake';
+  const invocationOptionsScreenshot = 'invocationOptionsScreenshot';
+  const invocationOptionsFloatingButton = 'invocationOptionsFloatingButton';
 
-  function setInvocationOptions(options: InvocationEventKey): void;
+
+  function setInvocationOptions(options: string): void;
   function startWithAPIKey(key: string): void;
   function setUserIdentifier(id: string): void;
   function setUserEmail(email: string): void;
