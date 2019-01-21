@@ -75,15 +75,24 @@ RCT_EXPORT_METHOD(addAttachmentWithContents:(NSString *)base64Contents type:(NSS
 
 RCT_EXPORT_METHOD(addAttachmentWithJSON:(id)jsonObject filename:(NSString *)filename resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:&error];
+    NSData *data;
+    LIFEAttachmentType *attachmentType;
     
-    if (!data) {
-        reject(error.domain, error.localizedDescription, error);
-        return;
+    if ([jsonObject isKindOfClass:[NSString class]]) {
+        data =  [(NSString *)jsonObject dataUsingEncoding:NSUTF8StringEncoding];
+        attachmentType = LIFEAttachmentTypeIdentifierText;
+    } else {
+        NSError *error = nil;
+        NSData *data = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:&error];
+        attachmentType = LIFEAttachmentTypeIdentifierJSON;
+
+        if (!data) {
+            reject(error.domain, error.localizedDescription, error);
+            return;
+        }
     }
     
-    [self _addAttachmentWithData:data type:LIFEAttachmentTypeIdentifierJSON filename:filename resolver:resolve rejecter:reject];
+    [self _addAttachmentWithData:data type:attachmentType filename:filename resolver:resolve rejecter:reject];
 }
 
 - (void)_addAttachmentWithData:(NSData *)data type:(NSString *)type filename:(NSString *)filename resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject
