@@ -4,13 +4,13 @@ package com.buglife;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.ReactPackage;
 
 import com.buglife.sdk.Buglife;
 import com.buglife.sdk.InvocationMethod;
 import com.buglife.sdk.Attachment;
+import com.facebook.react.bridge.ReadableMap;
 
 import org.json.JSONObject;
 
@@ -80,9 +80,25 @@ public class BuglifeModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void addAttachmentWithJSON(JSONObject data, String attachmentFileName, Promise promise) {
+  public void addAttachmentWithJSON(ReadableMap jsonData, String attachmentFileName, Promise promise) {
     try {
-      Attachment attachment = new Attachment.Builder(attachmentFileName, Attachment.TYPE_JSON).build(data);
+      JSONObject jsonObject = (JSONObject)jsonData;
+      Attachment attachment = new Attachment.Builder(attachmentFileName, Attachment.TYPE_JSON).build(jsonObject);
+
+      Buglife.addAttachment(attachment); // The android version of the API does not return a boolean
+      promise.resolve(null);
+    }
+    catch (Exception e) {
+      e.printStackTrace();
+      promise.reject("ATTACHMENT_ERR", e);
+    }
+  }
+
+  @ReactMethod
+  public void addAttachmentWithString(String textData, String attachmentFileName, Promise promise) {
+    try {
+      Attachment attachment = new Attachment.Builder(attachmentFileName, Attachment.TYPE_TEXT).build(textData);
+
       Buglife.addAttachment(attachment); // The android version of the API does not return a boolean
       promise.resolve(null);
     }
