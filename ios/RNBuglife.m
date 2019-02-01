@@ -73,26 +73,24 @@ RCT_EXPORT_METHOD(addAttachmentWithContents:(NSString *)base64Contents type:(NSS
     [self _addAttachmentWithData:data type:type filename:filename resolver:resolve rejecter:reject];
 }
 
-RCT_EXPORT_METHOD(addAttachmentWithJSON:(id)jsonObject filename:(NSString *)filename resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(addAttachmentWithJSON:(id)json filename:(NSString *)filename resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    NSData *data;
-    LIFEAttachmentType *attachmentType;
+    NSError *error = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:&error];
     
-    if ([jsonObject isKindOfClass:[NSString class]]) {
-        data =  [(NSString *)jsonObject dataUsingEncoding:NSUTF8StringEncoding];
-        attachmentType = LIFEAttachmentTypeIdentifierText;
-    } else {
-        NSError *error = nil;
-        NSData *data = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:&error];
-        attachmentType = LIFEAttachmentTypeIdentifierJSON;
-
-        if (!data) {
-            reject(error.domain, error.localizedDescription, error);
-            return;
-        }
+    if (!data) {
+        reject(error.domain, error.localizedDescription, error);
+        return;
     }
     
-    [self _addAttachmentWithData:data type:attachmentType filename:filename resolver:resolve rejecter:reject];
+    [self _addAttachmentWithData:data type:LIFEAttachmentTypeIdentifierJSON filename:filename resolver:resolve rejecter:reject];
+}
+
+RCT_EXPORT_METHOD(addAttachmentWithString:(NSString *)text filename:(NSString *)filename resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    NSData *data = data = [(NSString *)text dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [self _addAttachmentWithData:data type:LIFEAttachmentTypeIdentifierText filename:filename resolver:resolve rejecter:reject];
 }
 
 - (void)_addAttachmentWithData:(NSData *)data type:(NSString *)type filename:(NSString *)filename resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject
