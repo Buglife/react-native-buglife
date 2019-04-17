@@ -103,6 +103,13 @@ var myData = { }; // This should be a JSON object with your data
 Buglife.addAttachmentWithJSON(myData, "MyData.json");
 ```
 
+It’s also possible to add a String attachment:
+
+```javascript
+var myText = "great detailed log"; // This should be a String object with your data
+Buglife.addAttachmentWithString(myText, "MyText.text");
+```
+
 In some cases, you may wish to add an attachment on every invocation of the bug reporter; You can do so by subscribing to the `BuglifeAttachmentRequest` event:
 
 ```javascript
