@@ -3,6 +3,7 @@
   "version": "0.1.13",
   "description": "Buglife for React Native",
   "main": "index",
+  "types": "index.d.ts",
   "nativePackage": true,
   "scripts": {
     "test": "flow"
